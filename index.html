@@ -579,7 +579,7 @@ body {
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    DETAIL PAGES (TABLES)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-#ros-detail, #ms-detail, #daa-detail {
+#ros-detail, #ms-detail, #daa-detail, #deadlines, #flat-detail, #oop-detail {
   justify-content: flex-start;
   padding-top: clamp(90px, 15vw, 130px);
 }
@@ -779,7 +779,6 @@ body {
 </head>
 <body>
 
-<!-- ══ BACKGROUND ══ -->
 <div class="bg-layer bg-mesh"></div>
 <div class="bg-layer bg-grid"></div>
 <div class="bg-layer bg-noise"></div>
@@ -788,9 +787,6 @@ body {
 <div class="orb orb-3"></div>
 <canvas id="constellation"></canvas>
 
-<!-- ══════════════════════════════════
-     HOME
-══════════════════════════════════ -->
 <div class="page active" id="home">
 
   <div class="uni-badge">
@@ -812,7 +808,7 @@ body {
       ⚠ &nbsp;Important Notice
     </div>
     Please ensure your presentation file name is formatted correctly as per the instructions given for each subjects.
-    <br><strong>Strictly follow the last submission deadline for every subjects.</strong>
+    <br><strong>Strictly follow the last submission deadline for every subjects. &nbsp;•&nbsp; Use your university email ID to access the ppt submission form.</strong>
   </div>
 
   <div class="cta-group">
@@ -824,13 +820,14 @@ body {
       <span class="btn-label">Find Your Assigned Topic</span>
       <span class="btn-icon">↗</span>
     </button>
+    <button class="btn-secondary" id="deadlineBtn" style="border-color: rgba(244, 63, 94, 0.4);" aria-label="Check the last submission date">
+      <span class="btn-label">Check The Last Submission Date</span>
+      <span class="btn-icon">📅</span>
+    </button>
   </div>
 
 </div>
 
-<!-- ══════════════════════════════════
-     SUBJECTS
-══════════════════════════════════ -->
 <div class="page" id="subjects">
   <button class="back-btn" id="backBtn">← Back</button>
 
@@ -842,7 +839,7 @@ body {
 
   <div class="cards-grid" role="list">
 
-    <a class="subject-card" href="https://forms.gle/kw13iFTVrpgHweSs9" target="_blank" rel="noopener noreferrer" role="listitem">
+    <a class="subject-card" href="https://forms.gle/RzKsaspumEfRTQnR7" target="_blank" rel="noopener noreferrer" role="listitem">
       <div class="card-num">Subject 01</div>
       <div>
         <div class="card-name">Robot Operating Systems</div>
@@ -852,27 +849,27 @@ body {
       <div class="card-arrow">↗</div>
     </a>
 
-    <a class="subject-card" href="https://forms.gle/kw13iFTVrpgHweSs9" target="_blank" rel="noopener noreferrer" role="listitem">
+    <a class="subject-card" href="https://forms.gle/7PfoeD6GfDJZw4J1A" target="_blank" rel="noopener noreferrer" role="listitem">
       <div class="card-num">Subject 02</div>
       <div>
         <div class="card-name">Design Thinking for Entrepreneurship and Startups</div>
         <div class="card-code">BHS00005</div>
       </div>
-      <div class="card-deadline">📅 Last Submission Date: March 31, 2026</div>
+      <div class="card-deadline">📅 Last Submission Date will be updated soon</div>
       <div class="card-arrow">↗</div>
     </a>
 
-    <a class="subject-card" href="https://forms.gle/kw13iFTVrpgHweSs9" target="_blank" rel="noopener noreferrer" role="listitem">
+    <a class="subject-card" href="https://forms.gle/ePZ9JtaVCziMpK1XA" target="_blank" rel="noopener noreferrer" role="listitem">
       <div class="card-num">Subject 03</div>
       <div>
         <div class="card-name">Object Oriented Programming</div>
         <div class="card-code">BTR40107</div>
       </div>
-      <div class="card-deadline">📅 Last Submission Date: March 31, 2026</div>
+      <div class="card-deadline">📅 Last Submission Date: March 19, 2026</div>
       <div class="card-arrow">↗</div>
     </a>
 
-    <a class="subject-card" href="https://forms.gle/kw13iFTVrpgHweSs9" target="_blank" rel="noopener noreferrer" role="listitem">
+    <a class="subject-card" href="https://forms.gle/Rg6o2qcmoMh26qU16" target="_blank" rel="noopener noreferrer" role="listitem">
       <div class="card-num">Subject 04</div>
       <div>
         <div class="card-name">Formal Language and Automata Theory</div>
@@ -882,7 +879,7 @@ body {
       <div class="card-arrow">↗</div>
     </a>
 
-    <a class="subject-card" href="https://forms.gle/kw13iFTVrpgHweSs9" target="_blank" rel="noopener noreferrer" role="listitem">
+    <a class="subject-card" href="https://forms.gle/5i3qp8aoCGVN43fe9" target="_blank" rel="noopener noreferrer" role="listitem">
       <div class="card-num">Subject 05</div>
       <div>
         <div class="card-name">Material Science</div>
@@ -892,22 +889,19 @@ body {
       <div class="card-arrow">↗</div>
     </a>
 
-    <a class="subject-card" href="https://forms.gle/kw13iFTVrpgHweSs9" target="_blank" rel="noopener noreferrer" role="listitem">
+    <a class="subject-card" href="https://forms.gle/Xn13PwfpzxXgJKwU9" target="_blank" rel="noopener noreferrer" role="listitem">
       <div class="card-num">Subject 06</div>
       <div>
         <div class="card-name">Probability and Statistics</div>
         <div class="card-code">BBS00014</div>
       </div>
-      <div class="card-deadline">📅 Last Submission Date: March 31, 2026</div>
+      <div class="card-deadline">📅 Last Submission Date will be updated soon</div>
       <div class="card-arrow">↗</div>
     </a>
 
   </div>
 </div>
 
-<!-- ══════════════════════════════════
-     TOPICS
-══════════════════════════════════ -->
 <div class="page" id="topics">
   <button class="back-btn" id="backBtn2">← Back</button>
 
@@ -938,22 +932,24 @@ body {
       <div class="card-status-pending">⏳ &nbsp;Topics will be updated soon</div>
     </div>
 
-    <div class="topic-card" role="listitem">
-      <div class="card-num">Subject 03</div>
+    <div class="topic-card clickable" id="oopCard" role="listitem" tabindex="0" aria-label="View Object Oriented Programming topic list">
+      <div class="card-num" style="color:var(--cyan);background:rgba(0,212,255,0.1);border-color:rgba(0,212,255,0.22);">Subject 03</div>
       <div>
         <div class="card-name">Object Oriented Programming</div>
         <div class="card-code">BTR40107</div>
       </div>
-      <div class="card-status-pending">⏳ &nbsp;Topics will be updated soon</div>
+      <div class="card-status-ready">✓ &nbsp;Topics available — click to view</div>
+      <div class="card-arrow">↗</div>
     </div>
 
-    <div class="topic-card" role="listitem">
-      <div class="card-num">Subject 04</div>
+    <div class="topic-card clickable" id="flatCard" role="listitem" tabindex="0" aria-label="View Formal Language and Automata Theory topic list">
+      <div class="card-num" style="color:var(--cyan);background:rgba(0,212,255,0.1);border-color:rgba(0,212,255,0.22);">Subject 04</div>
       <div>
         <div class="card-name">Formal Language and Automata Theory</div>
         <div class="card-code">BTR40108</div>
       </div>
-      <div class="card-status-pending">⏳ &nbsp;Topics will be updated soon</div>
+      <div class="card-status-ready">✓ &nbsp;Topics available — click to view</div>
+      <div class="card-arrow">↗</div>
     </div>
 
     <div class="topic-card clickable" id="msCard" role="listitem" tabindex="0" aria-label="View Material Science topic list">
@@ -988,9 +984,77 @@ body {
   </div>
 </div>
 
-<!-- ══════════════════════════════════
-     ROS DETAIL
-══════════════════════════════════ -->
+<div class="page" id="deadlines">
+  <button class="back-btn" id="backBtn6">← Back</button>
+  <div class="detail-header">
+    <div class="section-eyebrow">Submission Calendar</div>
+    <h2>Submission <em>Deadlines</em></h2>
+    <p>Final dates for PPT submission — Semester 4</p>
+  </div>
+  
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Sl.</th>
+          <th>Subject Name</th>
+          <th>Subject Code</th>
+          <th>Last Submission Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-sl">01</td>
+          <td class="td-name">Robot Operating Systems</td>
+          <td class="td-code">BTR40105</td>
+          <td class="td-date">March 31, 2026</td>
+        </tr>
+        <tr>
+          <td class="td-sl">02</td>
+          <td class="td-name">Design Thinking for Entrepreneurship</td>
+          <td class="td-code">BHS00005</td>
+          <td class="td-date" style="color:var(--txt3)">Will be updated soon</td>
+        </tr>
+        <tr>
+          <td class="td-sl">03</td>
+          <td class="td-name">Object Oriented Programming</td>
+          <td class="td-code">BTR40107</td>
+          <td class="td-date">March 19, 2026</td>
+        </tr>
+        <tr>
+          <td class="td-sl">04</td>
+          <td class="td-name">Formal Language and Automata Theory</td>
+          <td class="td-code">BTR40108</td>
+          <td class="td-date">March 31, 2026</td>
+        </tr>
+        <tr>
+          <td class="td-sl">05</td>
+          <td class="td-name">Material Science</td>
+          <td class="td-code">BTR40109</td>
+          <td class="td-date">March 31, 2026</td>
+        </tr>
+        <tr>
+          <td class="td-sl">06</td>
+          <td class="td-name">Probability and Statistics</td>
+          <td class="td-code">BBS00014</td>
+          <td class="td-date" style="color:var(--txt3)">Will be updated soon</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cta-group" style="margin-top: 20px;">
+    <button class="btn-primary" id="ctaBtn2">
+      <span class="btn-label">Submit Your Presentation</span>
+      <span class="btn-icon">→</span>
+    </button>
+    <button class="btn-secondary" id="topicBtn2">
+      <span class="btn-label">Find Your Assigned Topic</span>
+      <span class="btn-icon">↗</span>
+    </button>
+  </div>
+</div>
+
 <div class="page" id="ros-detail">
   <button class="back-btn" id="backBtn3">← Back</button>
   <div class="detail-header">
@@ -1024,9 +1088,6 @@ body {
   </div>
 </div>
 
-<!-- ══════════════════════════════════
-     MS DETAIL
-══════════════════════════════════ -->
 <div class="page" id="ms-detail">
   <button class="back-btn" id="backBtn4">← Back</button>
   <div class="detail-header">
@@ -1058,9 +1119,6 @@ body {
   </div>
 </div>
 
-<!-- ══════════════════════════════════
-     DAA DETAIL
-══════════════════════════════════ -->
 <div class="page" id="daa-detail">
   <button class="back-btn" id="backBtn5">← Back</button>
   <div class="detail-header">
@@ -1090,6 +1148,69 @@ body {
         </tr>
       </thead>
       <tbody id="daaTbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="page" id="flat-detail">
+  <button class="back-btn" id="backBtn7">← Back</button>
+  <div class="detail-header">
+    <h2>Formal Language & <em>Automata Theory</em></h2>
+    <p>B.Tech CSE – AIR 2024 &nbsp;·&nbsp; Semester 4</p>
+  </div>
+  <div class="detail-meta">
+    <span class="meta-pill cyan">BTR40108</span>
+    <span class="meta-pill slate">Semester 4</span>
+    <span class="meta-pill amber">Year 2</span>
+  </div>
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input class="search-input" id="flatSearch" type="search" placeholder="Search by student code or name…" autocomplete="off" spellcheck="false">
+  </div>
+  <div class="search-count" id="flatCount">Showing all <strong>56</strong> students</div>
+  <div class="table-wrap">
+    <table class="data-table" id="flatTable">
+      <thead>
+        <tr>
+          <th>Sl.</th>
+          <th>Student Code</th>
+          <th>Name</th>
+          <th>Presentation Topic</th>
+          <th>Presentation Date</th>
+        </tr>
+      </thead>
+      <tbody id="flatTbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="page" id="oop-detail">
+  <button class="back-btn" id="backBtn8">← Back</button>
+  <div class="detail-header">
+    <h2>Object Oriented <em>Programming</em></h2>
+    <p>B.Tech CSE – AIR 2024 &nbsp;·&nbsp; Semester 4</p>
+  </div>
+  <div class="detail-meta">
+    <span class="meta-pill cyan">BTR40107</span>
+    <span class="meta-pill slate">Semester 4</span>
+    <span class="meta-pill amber">Year 2</span>
+  </div>
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input class="search-input" id="oopSearch" type="search" placeholder="Search by student code or name…" autocomplete="off" spellcheck="false">
+  </div>
+  <div class="search-count" id="oopCount">Showing all <strong>56</strong> students</div>
+  <div class="table-wrap">
+    <table class="data-table" id="oopTable">
+      <thead>
+        <tr>
+          <th>Sl.</th>
+          <th>Student Code</th>
+          <th>Name</th>
+          <th>Presentation Topic</th>
+        </tr>
+      </thead>
+      <tbody id="oopTbody"></tbody>
     </table>
   </div>
 </div>
@@ -1152,189 +1273,301 @@ body {
 })();
 
 /* ══════════════════════════════════════════
-   ROS DATA
+   STUDENT DATA ARRAYS
 ══════════════════════════════════════════ */
 const rosData = [
-  {sl:1,  code:'BWU/BAR/24/001', name:'SOUMEN BHANDARI',                              sub:'4/3/2026',  topic:'Introduction to Robotics: History and Evolution',              pres:'4/3/2026'},
-  {sl:2,  code:'BWU/BAR/24/002', name:'DHRUBAJOTI KAR',                               sub:'4/3/2026',  topic:'Applications of Robotics in Modern Industries',                pres:'4/3/2026'},
-  {sl:3,  code:'BWU/BAR/24/003', name:'NIMESH SAMANTA',                               sub:'4/3/2026',  topic:'Challenges in Robotics Development',                           pres:'4/3/2026'},
-  {sl:4,  code:'BWU/BAR/24/004', name:'SUBHAJIT BHAKTA',                              sub:'4/3/2026',  topic:'Introduction to Robot Operating System (ROS)',                  pres:'4/3/2026'},
-  {sl:5,  code:'BWU/BAR/24/007', name:'ATANU BISWAS',                                 sub:'4/3/2026',  topic:'Evolution and Goals of ROS',                                    pres:'4/3/2026'},
-  {sl:6,  code:'BWU/BAR/24/008', name:'JOGA JYOTHENDRAVEERAVENKATAS ATYASURYAKANTH',  sub:'4/3/2026',  topic:'Importance of ROS in Modern Robotics',                         pres:'4/3/2026'},
-  {sl:7,  code:'BWU/BAR/24/009', name:'SANIA AKTAR',                                  sub:'4/3/2026',  topic:'ROS Architecture Overview',                                     pres:'4/3/2026'},
-  {sl:8,  code:'BWU/BAR/24/010', name:'DIPSIKHA PAYRA',                               sub:'4/3/2026',  topic:'ROS Nodes and Their Functions',                                 pres:'4/3/2026'},
-  {sl:9,  code:'BWU/BAR/24/011', name:'SUPARNA GHORA',                                sub:'4/3/2026',  topic:'ROS Master and Parameter Server',                               pres:'4/3/2026'},
-  {sl:10, code:'BWU/BAR/24/012', name:'DIPIKA MAITY',                                 sub:'4/3/2026',  topic:'ROS Communication Layers',                                      pres:'4/3/2026'},
-  {sl:11, code:'BWU/BAR/24/013', name:'AKASH BAIRAGI',                                sub:'4/3/2026',  topic:'ROS Computation Graph',                                         pres:'4/3/2026'},
-  {sl:12, code:'BWU/BAR/24/014', name:'ANKAN DUTTA',                                  sub:'4/3/2026',  topic:'ROS Workspace and Package Structure',                           pres:'4/3/2026'},
-  {sl:13, code:'BWU/BAR/24/015', name:'ARNAB SAHANA',                                 sub:'4/3/2026',  topic:'Middleware in Robotics: Concept and Importance',                pres:'4/3/2026'},
-  {sl:14, code:'BWU/BAR/24/016', name:'SUPRAJIT DE',                                  sub:'4/3/2026',  topic:'ROS Middleware Architecture',                                   pres:'4/3/2026'},
-  {sl:15, code:'BWU/BAR/24/019', name:'SHILPI BHOWMICK',                              sub:'4/3/2026',  topic:'Comparison of ROS Middleware with Other Middleware Systems',    pres:'4/3/2026'},
-  {sl:16, code:'BWU/BAR/24/020', name:'MAHUYA BHOWMICK',                              sub:'4/3/2026',  topic:'Introduction to ROS Tools',                                     pres:'4/9/2026'},
-  {sl:17, code:'BWU/BAR/24/021', name:'SAIKAT HAZRA',                                 sub:'4/3/2026',  topic:'RQT Tool in ROS',                                               pres:'4/9/2026'},
-  {sl:18, code:'BWU/BAR/24/023', name:'SK SAHIL UDDIN',                               sub:'4/3/2026',  topic:'RViz Visualization Tool',                                       pres:'4/9/2026'},
-  {sl:19, code:'BWU/BAR/24/027', name:'SHANE ALI',                                    sub:'4/3/2026',  topic:'Gazebo Simulation Environment',                                 pres:'4/9/2026'},
-  {sl:20, code:'BWU/BAR/24/028', name:'PRERANA BANERJEE',                             sub:'4/3/2026',  topic:'Integration of Gazebo with ROS',                                pres:'4/9/2026'},
-  {sl:21, code:'BWU/BAR/24/029', name:'ARNAB KUMAR JANA',                             sub:'4/3/2026',  topic:'Importance of Visualization in Robotics',                       pres:'4/9/2026'},
-  {sl:22, code:'BWU/BAR/24/030', name:'ARIJIT SAIN',                                  sub:'4/3/2026',  topic:'Simulation in Robotics Using ROS',                              pres:'4/9/2026'},
-  {sl:23, code:'BWU/BAR/24/031', name:'UJJAL DOLUI',                                  sub:'4/3/2026',  topic:'Real-world vs Simulation-based Robotics',                       pres:'4/9/2026'},
-  {sl:24, code:'BWU/BAR/24/033', name:'ABHISHEK MONDAL',                              sub:'4/3/2026',  topic:'Using RViz for Robot Visualization',                            pres:'4/9/2026'},
-  {sl:25, code:'BWU/BAR/24/034', name:'SANDIP PARAMANIK',                             sub:'4/3/2026',  topic:'Message Passing Paradigm in ROS',                               pres:'4/9/2026'},
-  {sl:26, code:'BWU/BAR/24/035', name:'ARITRA MALIK',                                 sub:'4/3/2026',  topic:'ROS Topics: Concept and Working',                               pres:'4/9/2026'},
-  {sl:27, code:'BWU/BAR/24/036', name:'ANIRBAN SARKAR',                               sub:'4/3/2026',  topic:'Publishers and Subscribers in ROS',                             pres:'4/9/2026'},
-  {sl:28, code:'BWU/BAR/24/037', name:'ANUBRATA BHATTACHARYA',                        sub:'4/3/2026',  topic:'ROS Message Structure',                                         pres:'4/9/2026'},
-  {sl:29, code:'BWU/BAR/24/038', name:'MOULENDU SINHA',                               sub:'4/3/2026',  topic:'Serialization and Deserialization in ROS',                      pres:'4/9/2026'},
-  {sl:30, code:'BWU/BAR/24/039', name:'MALAIKA FIRDOUS AMIR',                         sub:'4/3/2026',  topic:'Custom ROS Messages',                                           pres:'4/9/2026'},
-  {sl:31, code:'BWU/BAR/24/040', name:'PRIYAM JANA',                                  sub:'4/3/2026',  topic:'Creating Custom Message Types in ROS',                          pres:'4/9/2026'},
-  {sl:32, code:'BWU/BAR/24/042', name:'SOUMIK PAL',                                   sub:'4/3/2026',  topic:'Best Practices for ROS Messages',                               pres:'4/9/2026'},
-  {sl:33, code:'BWU/BAR/24/044', name:'HIRAK GANGULY',                                sub:'4/3/2026',  topic:'ROS Services: Concept and Working',                             pres:'4/9/2026'},
-  {sl:34, code:'BWU/BAR/24/045', name:'SIBKATULLA AL ISLAM',                          sub:'4/3/2026',  topic:'ROS Actions: Concept and Working',                              pres:'4/9/2026'},
-  {sl:35, code:'BWU/BAR/24/046', name:'TURNA BERA',                                   sub:'4/3/2026',  topic:'Services vs Actions in ROS',                                    pres:'4/9/2026'},
-  {sl:36, code:'BWU/BAR/24/047', name:'KUNTAL MANDAL',                                sub:'4/3/2026',  topic:'Topics vs Services vs Actions Comparison',                      pres:'4/9/2026'},
-  {sl:37, code:'BWU/BAR/24/048', name:'SUDIP DAS',                                    sub:'4/3/2026',  topic:'ROS Package Development Process',                               pres:'4/9/2026'},
-  {sl:38, code:'BWU/BAR/24/049', name:'RAJARSHEE BERA',                               sub:'4/3/2026',  topic:'Structure of a ROS Package',                                    pres:'4/9/2026'},
-  {sl:39, code:'BWU/BAR/24/050', name:'KAZI WASIM AKRAM',                             sub:'4/3/2026',  topic:'Guidelines and Best Practices for ROS Development',             pres:'4/9/2026'},
-  {sl:40, code:'BWU/BAR/24/052', name:'GAUSUL AZAM SK',                               sub:'4/3/2026',  topic:'ROS Programming Using Python',                                  pres:'4/9/2026'},
-  {sl:41, code:'BWU/BAR/24/053', name:'MASUDUL ALAM',                                 sub:'4/3/2026',  topic:'ROS Programming Using C++',                                     pres:'4/9/2026'},
-  {sl:42, code:'BWU/BAR/24/054', name:'SUBHAM KUMBHAKAR',                             sub:'4/3/2026',  topic:'Python vs C++ in ROS',                                          pres:'4/9/2026'},
-  {sl:43, code:'BWU/BAR/24/055', name:'ARITRIK DEV',                                  sub:'4/3/2026',  topic:'ROS Testing Techniques',                                        pres:'4/9/2026'},
-  {sl:44, code:'BWU/BAR/24/056', name:'KRISH BISHWAKARMA',                            sub:'4/3/2026',  topic:'Debugging ROS Programs',                                        pres:'4/9/2026'},
-  {sl:45, code:'BWU/BAR/24/057', name:'BARNALI MANDAL',                               sub:'4/3/2026',  topic:'Integration of Sensors with ROS',                               pres:'4/9/2026'},
-  {sl:46, code:'BWU/BAR/24/058', name:'ROHAN KAR',                                    sub:'4/3/2026',  topic:'Integration of Actuators with ROS',                             pres:'4/10/2026'},
-  {sl:47, code:'BWU/BAR/24/059', name:'ROHON DAS',                                    sub:'4/3/2026',  topic:'ROS Middleware Integration (ROS Bridge and ROS2)',               pres:'4/10/2026'},
-  {sl:48, code:'BWU/BAR/24/062', name:'DEBABRATA DEY',                                sub:'4/3/2026',  topic:'Overview of ROS Navigation Stack',                              pres:'4/10/2026'},
-  {sl:49, code:'BWU/BAR/24/063', name:'PRAGYANSHU SAGAR GIRI',                        sub:'4/3/2026',  topic:'Robot Localization Techniques in ROS',                          pres:'4/10/2026'},
-  {sl:50, code:'BWU/BAR/24/065', name:'MAHAPRASHAD KARMAKAR',                         sub:'4/3/2026',  topic:'Introduction to SLAM in ROS',                                   pres:'4/10/2026'},
-  {sl:51, code:'BWU/BAR/24/066', name:'Mohit Kumar',                                  sub:'4/3/2026',  topic:'Mapping Techniques in ROS',                                     pres:'4/10/2026'},
-  {sl:52, code:'BWU/BAR/24/069', name:'Biswajit Chakraborty',                         sub:'4/3/2026',  topic:'Path Planning Algorithms in ROS',                               pres:'4/10/2026'},
-  {sl:53, code:'BWU/BAR/24/070', name:'Disha Mandal',                                 sub:'4/3/2026',  topic:'Autonomous Navigation Using ROS',                               pres:'4/10/2026'},
-  {sl:54, code:'BWU/BAR/24/071', name:'Dipan Paul',                                   sub:'4/3/2026',  topic:'ROS Security Mechanisms',                                       pres:'4/10/2026'},
-  {sl:55, code:'BWU/BAR/24/072', name:'Sagar Sk',                                     sub:'4/3/2026',  topic:'Authentication and Authorization in ROS',                       pres:'4/10/2026'},
-  {sl:56, code:'BWU/BAR/24/073', name:'Sayan Basak',                                  sub:'4/3/2026',  topic:'Real-Time Systems in ROS',                                      pres:'4/10/2026'},
+  {sl:1,  code:'BWU/BAR/24/001', name:'SOUMEN BHANDARI', sub:'4/3/2026', topic:'Introduction to Robotics: History and Evolution', pres:'4/3/2026'},
+  {sl:2,  code:'BWU/BAR/24/002', name:'DHRUBAJOTI KAR', sub:'4/3/2026', topic:'Applications of Robotics in Modern Industries', pres:'4/3/2026'},
+  {sl:3,  code:'BWU/BAR/24/003', name:'NIMESH SAMANTA', sub:'4/3/2026', topic:'Challenges in Robotics Development', pres:'4/3/2026'},
+  {sl:4,  code:'BWU/BAR/24/004', name:'SUBHAJIT BHAKTA', sub:'4/3/2026', topic:'Introduction to Robot Operating System (ROS)', pres:'4/3/2026'},
+  {sl:5,  code:'BWU/BAR/24/007', name:'ATANU BISWAS', sub:'4/3/2026', topic:'Evolution and Goals of ROS', pres:'4/3/2026'},
+  {sl:6,  code:'BWU/BAR/24/008', name:'JOGA JYOTHENDRAVEERAVENKATAS ATYASURYAKANTH', sub:'4/3/2026', topic:'Importance of ROS in Modern Robotics', pres:'4/3/2026'},
+  {sl:7,  code:'BWU/BAR/24/009', name:'SANIA AKTAR', sub:'4/3/2026', topic:'ROS Architecture Overview', pres:'4/3/2026'},
+  {sl:8,  code:'BWU/BAR/24/010', name:'DIPSIKHA PAYRA', sub:'4/3/2026', topic:'ROS Nodes and Their Functions', pres:'4/3/2026'},
+  {sl:9,  code:'BWU/BAR/24/011', name:'SUPARNA GHORA', sub:'4/3/2026', topic:'ROS Master and Parameter Server', pres:'4/3/2026'},
+  {sl:10, code:'BWU/BAR/24/012', name:'DIPIKA MAITY', sub:'4/3/2026', topic:'ROS Communication Layers', pres:'4/3/2026'},
+  {sl:11, code:'BWU/BAR/24/013', name:'AKASH BAIRAGI', sub:'4/3/2026', topic:'ROS Computation Graph', pres:'4/3/2026'},
+  {sl:12, code:'BWU/BAR/24/014', name:'ANKAN DUTTA', sub:'4/3/2026', topic:'ROS Workspace and Package Structure', pres:'4/3/2026'},
+  {sl:13, code:'BWU/BAR/24/015', name:'ARNAB SAHANA', sub:'4/3/2026', topic:'Middleware in Robotics: Concept and Importance', pres:'4/3/2026'},
+  {sl:14, code:'BWU/BAR/24/016', name:'SUPRAJIT DE', sub:'4/3/2026', topic:'ROS Middleware Architecture', pres:'4/3/2026'},
+  {sl:15, code:'BWU/BAR/24/019', name:'SHILPI BHOWMICK', sub:'4/3/2026', topic:'Comparison of ROS Middleware with Other Middleware Systems', pres:'4/3/2026'},
+  {sl:16, code:'BWU/BAR/24/020', name:'MAHUYA BHOWMICK', sub:'4/3/2026', topic:'Introduction to ROS Tools', pres:'4/9/2026'},
+  {sl:17, code:'BWU/BAR/24/021', name:'SAIKAT HAZRA', sub:'4/3/2026', topic:'RQT Tool in ROS', pres:'4/9/2026'},
+  {sl:18, code:'BWU/BAR/24/023', name:'SK SAHIL UDDIN', sub:'4/3/2026', topic:'RViz Visualization Tool', pres:'4/9/2026'},
+  {sl:19, code:'BWU/BAR/24/027', name:'SHANE ALI', sub:'4/3/2026', topic:'Gazebo Simulation Environment', pres:'4/9/2026'},
+  {sl:20, code:'BWU/BAR/24/028', name:'PRERANA BANERJEE', sub:'4/3/2026', topic:'Integration of Gazebo with ROS', pres:'4/9/2026'},
+  {sl:21, code:'BWU/BAR/24/029', name:'ARNAB KUMAR JANA', sub:'4/3/2026', topic:'Importance of Visualization in Robotics', pres:'4/9/2026'},
+  {sl:22, code:'BWU/BAR/24/030', name:'ARIJIT SAIN', sub:'4/3/2026', topic:'Simulation in Robotics Using ROS', pres:'4/9/2026'},
+  {sl:23, code:'BWU/BAR/24/031', name:'UJJAL DOLUI', sub:'4/3/2026', topic:'Real-world vs Simulation-based Robotics', pres:'4/9/2026'},
+  {sl:24, code:'BWU/BAR/24/033', name:'ABHISHEK MONDAL', sub:'4/3/2026', topic:'Using RViz for Robot Visualization', pres:'4/9/2026'},
+  {sl:25, code:'BWU/BAR/24/034', name:'SANDIP PARAMANIK', sub:'4/3/2026', topic:'Message Passing Paradigm in ROS', pres:'4/9/2026'},
+  {sl:26, code:'BWU/BAR/24/035', name:'ARITRA MALIK', sub:'4/3/2026', topic:'ROS Topics: Concept and Working', pres:'4/9/2026'},
+  {sl:27, code:'BWU/BAR/24/036', name:'ANIRBAN SARKAR', sub:'4/3/2026', topic:'Publishers and Subscribers in ROS', pres:'4/9/2026'},
+  {sl:28, code:'BWU/BAR/24/037', name:'ANUBRATA BHATTACHARYA', sub:'4/3/2026', topic:'ROS Message Structure', pres:'4/9/2026'},
+  {sl:29, code:'BWU/BAR/24/038', name:'MOULENDU SINHA', sub:'4/3/2026', topic:'Serialization and Deserialization in ROS', pres:'4/9/2026'},
+  {sl:30, code:'BWU/BAR/24/039', name:'MALAIKA FIRDOUS AMIR', sub:'4/3/2026', topic:'Custom ROS Messages', pres:'4/9/2026'},
+  {sl:31, code:'BWU/BAR/24/040', name:'PRIYAM JANA', sub:'4/3/2026', topic:'Creating Custom Message Types in ROS', pres:'4/9/2026'},
+  {sl:32, code:'BWU/BAR/24/042', name:'SOUMIK PAL', sub:'4/3/2026', topic:'Best Practices for ROS Messages', pres:'4/9/2026'},
+  {sl:33, code:'BWU/BAR/24/044', name:'HIRAK GANGULY', sub:'4/3/2026', topic:'ROS Services: Concept and Working', pres:'4/9/2026'},
+  {sl:34, code:'BWU/BAR/24/045', name:'SIBKATULLA AL ISLAM', sub:'4/3/2026', topic:'ROS Actions: Concept and Working', pres:'4/9/2026'},
+  {sl:35, code:'BWU/BAR/24/046', name:'TURNA BERA', sub:'4/3/2026', topic:'Services vs Actions in ROS', pres:'4/9/2026'},
+  {sl:36, code:'BWU/BAR/24/047', name:'KUNTAL MANDAL', sub:'4/3/2026', topic:'Topics vs Services vs Actions Comparison', pres:'4/9/2026'},
+  {sl:37, code:'BWU/BAR/24/048', name:'SUDIP DAS', sub:'4/3/2026', topic:'ROS Package Development Process', pres:'4/9/2026'},
+  {sl:38, code:'BWU/BAR/24/049', name:'RAJARSHEE BERA', sub:'4/3/2026', topic:'Structure of a ROS Package', pres:'4/9/2026'},
+  {sl:39, code:'BWU/BAR/24/050', name:'KAZI WASIM AKRAM', sub:'4/3/2026', topic:'Guidelines and Best Practices for ROS Development', pres:'4/9/2026'},
+  {sl:40, code:'BWU/BAR/24/052', name:'GAUSUL AZAM SK', sub:'4/3/2026', topic:'ROS Programming Using Python', pres:'4/9/2026'},
+  {sl:41, code:'BWU/BAR/24/053', name:'MASUDUL ALAM', sub:'4/3/2026', topic:'ROS Programming Using C++', pres:'4/9/2026'},
+  {sl:42, code:'BWU/BAR/24/054', name:'SUBHAM KUMBHAKAR', sub:'4/3/2026', topic:'Python vs C++ in ROS', pres:'4/9/2026'},
+  {sl:43, code:'BWU/BAR/24/055', name:'ARITRIK DEV', sub:'4/3/2026', topic:'ROS Testing Techniques', pres:'4/9/2026'},
+  {sl:44, code:'BWU/BAR/24/056', name:'KRISH BISHWAKARMA', sub:'4/3/2026', topic:'Debugging ROS Programs', pres:'4/9/2026'},
+  {sl:45, code:'BWU/BAR/24/057', name:'BARNALI MANDAL', sub:'4/3/2026', topic:'Integration of Sensors with ROS', pres:'4/9/2026'},
+  {sl:46, code:'BWU/BAR/24/058', name:'ROHAN KAR', sub:'4/3/2026', topic:'Integration of Actuators with ROS', pres:'4/10/2026'},
+  {sl:47, code:'BWU/BAR/24/059', name:'ROHON DAS', sub:'4/3/2026', topic:'ROS Middleware Integration (ROS Bridge and ROS2)', pres:'4/10/2026'},
+  {sl:48, code:'BWU/BAR/24/062', name:'DEBABRATA DEY', sub:'4/3/2026', topic:'Overview of ROS Navigation Stack', pres:'4/10/2026'},
+  {sl:49, code:'BWU/BAR/24/063', name:'PRAGYANSHU SAGAR GIRI', sub:'4/3/2026', topic:'Robot Localization Techniques in ROS', pres:'4/10/2026'},
+  {sl:50, code:'BWU/BAR/24/065', name:'MAHAPRASHAD KARMAKAR', sub:'4/3/2026', topic:'Introduction to SLAM in ROS', pres:'4/10/2026'},
+  {sl:51, code:'BWU/BAR/24/066', name:'Mohit Kumar', sub:'4/3/2026', topic:'Mapping Techniques in ROS', pres:'4/10/2026'},
+  {sl:52, code:'BWU/BAR/24/069', name:'Biswajit Chakraborty', sub:'4/3/2026', topic:'Path Planning Algorithms in ROS', pres:'4/10/2026'},
+  {sl:53, code:'BWU/BAR/24/070', name:'Disha Mandal', sub:'4/3/2026', topic:'Autonomous Navigation Using ROS', pres:'4/10/2026'},
+  {sl:54, code:'BWU/BAR/24/071', name:'Dipan Paul', sub:'4/3/2026', topic:'ROS Security Mechanisms', pres:'4/10/2026'},
+  {sl:55, code:'BWU/BAR/24/072', name:'Sagar Sk', sub:'4/3/2026', topic:'Authentication and Authorization in ROS', pres:'4/10/2026'},
+  {sl:56, code:'BWU/BAR/24/073', name:'Sayan Basak', sub:'4/3/2026', topic:'Real-Time Systems in ROS', pres:'4/10/2026'}
 ];
 
-/* ══════════════════════════════════════════
-   MS DATA
-══════════════════════════════════════════ */
 const msData = [
-  {sl:1,  code:'BWU/BAR/24/001', name:'SOUMEN BHANDARI',                              topic:'Evolution of Materials from Stone Age to Modern Engineering'},
-  {sl:2,  code:'BWU/BAR/24/002', name:'DHRUBAJOTI KAR',                               topic:'Importance of Materials Science in Engineering Applications'},
-  {sl:3,  code:'BWU/BAR/24/003', name:'NIMESH SAMANTA',                               topic:'Structure–Property Relationship in Materials'},
-  {sl:4,  code:'BWU/BAR/24/004', name:'SUBHAJIT BHAKTA',                              topic:'Processing–Structure–Property–Performance Correlation'},
-  {sl:5,  code:'BWU/BAR/24/007', name:'ATANU BISWAS',                                 topic:'Engineering Materials: Historical Development and Trends'},
-  {sl:6,  code:'BWU/BAR/24/008', name:'JOGA JYOTHENDRAVEERAVENKATAS ATYASURYAKANTH',  topic:'Advanced Materials and Their Industrial Applications'},
-  {sl:7,  code:'BWU/BAR/24/009', name:'SANIA AKTAR',                                  topic:'Smart Materials and Their Role in Modern Technology'},
-  {sl:8,  code:'BWU/BAR/24/010', name:'DIPSIKHA PAYRA',                               topic:'Nanomaterials: Introduction and Applications'},
-  {sl:9,  code:'BWU/BAR/24/011', name:'SUPARNA GHORA',                                topic:'Materials Selection in Engineering Design'},
-  {sl:10, code:'BWU/BAR/24/012', name:'DIPIKA MAITY',                                 topic:'Role of Materials Science in Aerospace Industry'},
-  {sl:11, code:'BWU/BAR/24/013', name:'AKASH BAIRAGI',                                topic:'Role of Materials Science in Biomedical Engineering'},
-  {sl:12, code:'BWU/BAR/24/014', name:'ANKAN DUTTA',                                  topic:'Case Study: Failure Analysis Due to Improper Material Selection'},
-  {sl:13, code:'BWU/BAR/24/015', name:'ARNAB SAHANA',                                 topic:'Fundamentals of Electronic Energy Band Theory'},
-  {sl:14, code:'BWU/BAR/24/016', name:'SUPRAJIT DE',                                  topic:'Free Electron Theory of Metals'},
-  {sl:15, code:'BWU/BAR/24/019', name:'SHILPI BHOWMICK',                              topic:'Classical Free Electron Theory vs Quantum Free Electron Theory'},
-  {sl:16, code:'BWU/BAR/24/020', name:'MAHUYA BHOWMICK',                              topic:'Sommerfeld Free Electron Theory'},
-  {sl:17, code:'BWU/BAR/24/021', name:'SAIKAT HAZRA',                                 topic:'Formation of Energy Bands in Solids'},
-  {sl:18, code:'BWU/BAR/24/023', name:'SK SAHIL UDDIN',                               topic:'Conductors, Semiconductors, and Insulators Based on Band Theory'},
-  {sl:19, code:'BWU/BAR/24/027', name:'SHANE ALI',                                    topic:'Fermi Energy and Fermi Surface'},
-  {sl:20, code:'BWU/BAR/24/028', name:'PRERANA BANERJEE',                             topic:'Effective Mass of Electron and Its Importance'},
-  {sl:21, code:'BWU/BAR/24/029', name:'ARNAB KUMAR JANA',                             topic:'Brillouin Zones and Their Physical Significance'},
-  {sl:22, code:'BWU/BAR/24/030', name:'ARIJIT SAIN',                                  topic:'Electrical Conduction Mechanism in Solids'},
-  {sl:23, code:'BWU/BAR/24/031', name:'UJJAL DOLUI',                                  topic:'Coordination Number and Packing Density'},
-  {sl:24, code:'BWU/BAR/24/033', name:'ABHISHEK MONDAL',                              topic:'Simple Cubic, BCC, and FCC Structures Comparison'},
-  {sl:25, code:'BWU/BAR/24/034', name:'SANDIP PARAMANIK',                             topic:'Hexagonal Close Packed (HCP) Structure'},
-  {sl:26, code:'BWU/BAR/24/035', name:'ARITRA MALIK',                                 topic:'Bragg\'s Law and X-ray Diffraction'},
-  {sl:27, code:'BWU/BAR/24/036', name:'ANIRBAN SARKAR',                               topic:'Point Defects in Crystals'},
-  {sl:28, code:'BWU/BAR/24/037', name:'ANUBRATA BHATTACHARYA',                        topic:'Line Defects (Dislocations) and Their Effects'},
-  {sl:29, code:'BWU/BAR/24/038', name:'MOULENDU SINHA',                               topic:'Surface Defects and Grain Boundaries'},
-  {sl:30, code:'BWU/BAR/24/039', name:'MALAIKA FIRDOUS AMIR',                         topic:'Volume Defects and Their Engineering Significance'},
-  {sl:31, code:'BWU/BAR/24/040', name:'PRIYAM JANA',                                  topic:'Classification of Engineering Materials'},
-  {sl:32, code:'BWU/BAR/24/042', name:'SOUMIK PAL',                                   topic:'Metallic Materials: Structure and Properties'},
-  {sl:33, code:'BWU/BAR/24/044', name:'HIRAK GANGULY',                                topic:'Ceramic Materials: Properties and Applications'},
-  {sl:34, code:'BWU/BAR/24/045', name:'SIBKATULLA AL ISLAM',                          topic:'Polymeric Materials: Types and Applications'},
-  {sl:35, code:'BWU/BAR/24/046', name:'TURNA BERA',                                   topic:'Composite Materials and Their Advantages'},
-  {sl:36, code:'BWU/BAR/24/047', name:'KUNTAL MANDAL',                                topic:'Magnetic Materials and Their Applications'},
-  {sl:37, code:'BWU/BAR/24/048', name:'SUDIP DAS',                                    topic:'Electronic Materials in Semiconductor Devices'},
-  {sl:38, code:'BWU/BAR/24/049', name:'RAJARSHEE BERA',                               topic:'Ferrous and Non-Ferrous Alloys'},
-  {sl:39, code:'BWU/BAR/24/050', name:'KAZI WASIM AKRAM',                             topic:'Biomaterials and Their Engineering Applications'},
-  {sl:40, code:'BWU/BAR/24/052', name:'GAUSUL AZAM SK',                               topic:'Advanced Composite Materials in Aerospace'},
-  {sl:41, code:'BWU/BAR/24/053', name:'MASUDUL ALAM',                                 topic:'Mechanical Properties of Materials: Stress and Strain'},
-  {sl:42, code:'BWU/BAR/24/054', name:'SUBHAM KUMBHAKAR',                             topic:'Elastic and Plastic Deformation in Materials'},
-  {sl:43, code:'BWU/BAR/24/055', name:'ARITRIK DEV',                                  topic:'Hardness and Hardness Testing Methods'},
-  {sl:44, code:'BWU/BAR/24/056', name:'KRISH BISHWAKARMA',                            topic:'Electrical Properties of Materials and Ohm\'s Law'},
-  {sl:45, code:'BWU/BAR/24/057', name:'BARNALI MANDAL',                               topic:'Electronic and Ionic Conduction in Materials'},
-  {sl:46, code:'BWU/BAR/24/058', name:'ROHAN KAR',                                    topic:'Intrinsic and Extrinsic Semiconductors'},
-  {sl:47, code:'BWU/BAR/24/059', name:'ROHON DAS',                                    topic:'Thermal Properties of Materials'},
-  {sl:48, code:'BWU/BAR/24/062', name:'DEBABRATA DEY',                                topic:'Thermal Conductivity and Thermal Diffusivity'},
-  {sl:49, code:'BWU/BAR/24/063', name:'PRAGYANSHU SAGAR GIRI',                        topic:'Physical Properties of Materials and Their Importance'},
-  {sl:50, code:'BWU/BAR/24/065', name:'MAHAPRASHAD KARMAKAR',                         topic:'Material Selection Based on Mechanical, Electrical, and Thermal Properties'},
-  {sl:51, code:'BWU/BAR/24/066', name:'Mohit Kumar',                                  topic:'Density of States in Solids'},
-  {sl:52, code:'BWU/BAR/24/069', name:'Biswajit Chakraborty',                         topic:'Energy Band Gap and Its Importance in Semiconductors'},
-  {sl:53, code:'BWU/BAR/24/070', name:'Disha Mandal',                                 topic:'Crystal Structure and Unit Cell Concepts'},
-  {sl:54, code:'BWU/BAR/24/071', name:'Dipan Paul',                                   topic:'Bravais Lattices and Their Types'},
-  {sl:55, code:'BWU/BAR/24/072', name:'Sagar Sk',                                     topic:'Symmetry Elements in Crystal Structures'},
-  {sl:56, code:'BWU/BAR/24/073', name:'Sayan Basak',                                  topic:'Atomic Packing Factor (APF) and Its Importance'},
+  {sl:1, code:'BWU/BAR/24/001', name:'SOUMEN BHANDARI', topic:'Evolution of Materials from Stone Age to Modern Engineering'},
+  {sl:2, code:'BWU/BAR/24/002', name:'DHRUBAJOTI KAR', topic:'Importance of Materials Science in Engineering Applications'},
+  {sl:3, code:'BWU/BAR/24/003', name:'NIMESH SAMANTA', topic:'Structure–Property Relationship in Materials'},
+  {sl:4, code:'BWU/BAR/24/004', name:'SUBHAJIT BHAKTA', topic:'Processing–Structure–Property–Performance Correlation'},
+  {sl:5, code:'BWU/BAR/24/007', name:'ATANU BISWAS', topic:'Engineering Materials: Historical Development and Trends'},
+  {sl:6, code:'BWU/BAR/24/008', name:'JOGA JYOTHENDRAVEERAVENKATAS ATYASURYAKANTH', topic:'Advanced Materials and Their Industrial Applications'},
+  {sl:7, code:'BWU/BAR/24/009', name:'SANIA AKTAR', topic:'Smart Materials and Their Role in Modern Technology'},
+  {sl:8, code:'BWU/BAR/24/010', name:'DIPSIKHA PAYRA', topic:'Nanomaterials: Introduction and Applications'},
+  {sl:9, code:'BWU/BAR/24/011', name:'SUPARNA GHORA', topic:'Materials Selection in Engineering Design'},
+  {sl:10, code:'BWU/BAR/24/012', name:'DIPIKA MAITY', topic:'Role of Materials Science in Aerospace Industry'},
+  {sl:11, code:'BWU/BAR/24/013', name:'AKASH BAIRAGI', topic:'Role of Materials Science in Biomedical Engineering'},
+  {sl:12, code:'BWU/BAR/24/014', name:'ANKAN DUTTA', topic:'Case Study: Failure Analysis Due to Improper Material Selection'},
+  {sl:13, code:'BWU/BAR/24/015', name:'ARNAB SAHANA', topic:'Fundamentals of Electronic Energy Band Theory'},
+  {sl:14, code:'BWU/BAR/24/016', name:'SUPRAJIT DE', topic:'Free Electron Theory of Metals'},
+  {sl:15, code:'BWU/BAR/24/019', name:'SHILPI BHOWMICK', topic:'Classical Free Electron Theory vs Quantum Free Electron Theory'},
+  {sl:16, code:'BWU/BAR/24/020', name:'MAHUYA BHOWMICK', topic:'Sommerfeld Free Electron Theory'},
+  {sl:17, code:'BWU/BAR/24/021', name:'SAIKAT HAZRA', topic:'Formation of Energy Bands in Solids'},
+  {sl:18, code:'BWU/BAR/24/023', name:'SK SAHIL UDDIN', topic:'Conductors, Semiconductors, and Insulators Based on Band Theory'},
+  {sl:19, code:'BWU/BAR/24/027', name:'SHANE ALI', topic:'Fermi Energy and Fermi Surface'},
+  {sl:20, code:'BWU/BAR/24/028', name:'PRERANA BANERJEE', topic:'Effective Mass of Electron and Its Importance'},
+  {sl:21, code:'BWU/BAR/24/029', name:'ARNAB KUMAR JANA', topic:'Brillouin Zones and Their Physical Significance'},
+  {sl:22, code:'BWU/BAR/24/030', name:'ARIJIT SAIN', topic:'Electrical Conduction Mechanism in Solids'},
+  {sl:23, code:'BWU/BAR/24/031', name:'UJJAL DOLUI', topic:'Coordination Number and Packing Density'},
+  {sl:24, code:'BWU/BAR/24/033', name:'ABHISHEK MONDAL', topic:'Simple Cubic, BCC, and FCC Structures Comparison'},
+  {sl:25, code:'BWU/BAR/24/034', name:'SANDIP PARAMANIK', topic:'Hexagonal Close Packed (HCP) Structure'},
+  {sl:26, code:'BWU/BAR/24/035', name:'ARITRA MALIK', topic:'Bragg\'s Law and X-ray Diffraction'},
+  {sl:27, code:'BWU/BAR/24/036', name:'ANIRBAN SARKAR', topic:'Point Defects in Crystals'},
+  {sl:28, code:'BWU/BAR/24/037', name:'ANUBRATA BHATTACHARYA', topic:'Line Defects (Dislocations) and Their Effects'},
+  {sl:29, code:'BWU/BAR/24/038', name:'MOULENDU SINHA', topic:'Surface Defects and Grain Boundaries'},
+  {sl:30, code:'BWU/BAR/24/039', name:'MALAIKA FIRDOUS AMIR', topic:'Volume Defects and Their Engineering Significance'},
+  {sl:31, code:'BWU/BAR/24/040', name:'PRIYAM JANA', topic:'Classification of Engineering Materials'},
+  {sl:32, code:'BWU/BAR/24/042', name:'SOUMIK PAL', topic:'Metallic Materials: Structure and Properties'},
+  {sl:33, code:'BWU/BAR/24/044', name:'HIRAK GANGULY', topic:'Ceramic Materials: Properties and Applications'},
+  {sl:34, code:'BWU/BAR/24/045', name:'SIBKATULLA AL ISLAM', topic:'Polymeric Materials: Types and Applications'},
+  {sl:35, code:'BWU/BAR/24/046', name:'TURNA BERA', topic:'Composite Materials and Their Advantages'},
+  {sl:36, code:'BWU/BAR/24/047', name:'KUNTAL MANDAL', topic:'Magnetic Materials and Their Applications'},
+  {sl:37, code:'BWU/BAR/24/048', name:'SUDIP DAS', topic:'Electronic Materials in Semiconductor Devices'},
+  {sl:38, code:'BWU/BAR/24/049', name:'RAJARSHEE BERA', topic:'Ferrous and Non-Ferrous Alloys'},
+  {sl:39, code:'BWU/BAR/24/050', name:'KAZI WASIM AKRAM', topic:'Biomaterials and Their Engineering Applications'},
+  {sl:40, code:'BWU/BAR/24/052', name:'GAUSUL AZAM SK', topic:'Advanced Composite Materials in Aerospace'},
+  {sl:41, code:'BWU/BAR/24/053', name:'MASUDUL ALAM', topic:'Mechanical Properties of Materials: Stress and Strain'},
+  {sl:42, code:'BWU/BAR/24/054', name:'SUBHAM KUMBHAKAR', topic:'Elastic and Plastic Deformation in Materials'},
+  {sl:43, code:'BWU/BAR/24/055', name:'ARITRIK DEV', topic:'Hardness and Hardness Testing Methods'},
+  {sl:44, code:'BWU/BAR/24/056', name:'KRISH BISHWAKARMA', topic:'Electrical Properties of Materials and Ohm\'s Law'},
+  {sl:45, code:'BWU/BAR/24/057', name:'BARNALI MANDAL', topic:'Electronic and Ionic Conduction in Materials'},
+  {sl:46, code:'BWU/BAR/24/058', name:'ROHAN KAR', topic:'Intrinsic and Extrinsic Semiconductors'},
+  {sl:47, code:'BWU/BAR/24/059', name:'ROHON DAS', topic:'Thermal Properties of Materials'},
+  {sl:48, code:'BWU/BAR/24/062', name:'DEBABRATA DEY', topic:'Thermal Conductivity and Thermal Diffusivity'},
+  {sl:49, code:'BWU/BAR/24/063', name:'PRAGYANSHU SAGAR GIRI', topic:'Physical Properties of Materials and Their Importance'},
+  {sl:50, code:'BWU/BAR/24/065', name:'MAHAPRASHAD KARMAKAR', topic:'Material Selection Based on Mechanical, Electrical, and Thermal Properties'},
+  {sl:51, code:'BWU/BAR/24/066', name:'Mohit Kumar', topic:'Density of States in Solids'},
+  {sl:52, code:'BWU/BAR/24/069', name:'Biswajit Chakraborty', topic:'Energy Band Gap and Its Importance in Semiconductors'},
+  {sl:53, code:'BWU/BAR/24/070', name:'Disha Mandal', topic:'Crystal Structure and Unit Cell Concepts'},
+  {sl:54, code:'BWU/BAR/24/071', name:'Dipan Paul', topic:'Bravais Lattices and Their Types'},
+  {sl:55, code:'BWU/BAR/24/072', name:'Sagar Sk', topic:'Symmetry Elements in Crystal Structures'},
+  {sl:56, code:'BWU/BAR/24/073', name:'Sayan Basak', topic:'Atomic Packing Factor (APF) and Its Importance'}
 ];
 
-/* ══════════════════════════════════════════
-   DAA DATA
-══════════════════════════════════════════ */
 const daaData = [
-  {sl:1,  code:'BWU/BAR/24/001', name:'SOUMEN BHANDARI',                              sub:'01.04.2026', topic:'Stages of algorithm development for problem-solving',                      pres:'08.04.2026'},
-  {sl:2,  code:'BWU/BAR/24/002', name:'DHRUBAJOTI KAR',                               sub:'01.04.2026', topic:'Proof of correctness of algorithms',                                       pres:'08.04.2026'},
-  {sl:3,  code:'BWU/BAR/24/003', name:'NIMESH SAMANTA',                               sub:'01.04.2026', topic:'Understanding asymptotic notation',                                         pres:'08.04.2026'},
-  {sl:4,  code:'BWU/BAR/24/004', name:'SUBHAJIT BHAKTA',                              sub:'01.04.2026', topic:'Recurrence relation basics',                                               pres:'08.04.2026'},
-  {sl:5,  code:'BWU/BAR/24/007', name:'ATANU BISWAS',                                 sub:'01.04.2026', topic:'Methods to solve recurrence relations',                                    pres:'08.04.2026'},
-  {sl:6,  code:'BWU/BAR/24/008', name:'JOGA JYOTHENDRAVEERAVENKATAS ATYASURYAKANTH',  sub:'01.04.2026', topic:'Master Theorem in recurrence relations',                                  pres:'08.04.2026'},
-  {sl:7,  code:'BWU/BAR/24/009', name:'SANIA AKTAR',                                  sub:'01.04.2026', topic:'Substitution method in recurrence relations',                             pres:'08.04.2026'},
-  {sl:8,  code:'BWU/BAR/24/010', name:'DIPSIKHA PAYRA',                               sub:'01.04.2026', topic:'Recurrence tree method',                                                  pres:'08.04.2026'},
-  {sl:9,  code:'BWU/BAR/24/011', name:'SUPARNA GHORA',                                sub:'01.04.2026', topic:'Brute force techniques overview',                                         pres:'08.04.2026'},
-  {sl:10, code:'BWU/BAR/24/012', name:'DIPIKA MAITY',                                 sub:'01.04.2026', topic:'Solving the Traveling Salesman Problem with brute force',                 pres:'08.04.2026'},
-  {sl:11, code:'BWU/BAR/24/013', name:'AKASH BAIRAGI',                                sub:'01.04.2026', topic:'Divide and conquer algorithm basics',                                     pres:'08.04.2026'},
-  {sl:12, code:'BWU/BAR/24/014', name:'ANKAN DUTTA',                                  sub:'01.04.2026', topic:'Strassen\'s algorithm for matrix multiplication',                         pres:'08.04.2026'},
-  {sl:13, code:'BWU/BAR/24/015', name:'ARNAB SAHANA',                                 sub:'01.04.2026', topic:'Greedy techniques introduction',                                          pres:'08.04.2026'},
-  {sl:14, code:'BWU/BAR/24/016', name:'SUPRAJIT DE',                                  sub:'01.04.2026', topic:'Huffman Codes and data compression overview',                             pres:'08.04.2026'},
-  {sl:15, code:'BWU/BAR/24/019', name:'SHILPI BHOWMICK',                              sub:'01.04.2026', topic:'Solving the Fractional Knapsack problem with greedy technique',           pres:'10.04.2026'},
-  {sl:16, code:'BWU/BAR/24/020', name:'MAHUYA BHOWMICK',                              sub:'01.04.2026', topic:'Introduction to dynamic programming',                                     pres:'10.04.2026'},
-  {sl:17, code:'BWU/BAR/24/021', name:'SAIKAT HAZRA',                                 sub:'01.04.2026', topic:'Solving the 0/1 Knapsack problem with dynamic programming',              pres:'10.04.2026'},
-  {sl:18, code:'BWU/BAR/24/023', name:'SK SAHIL UDDIN',                               sub:'01.04.2026', topic:'Matrix chain multiplication using dynamic programming',                   pres:'10.04.2026'},
-  {sl:19, code:'BWU/BAR/24/027', name:'SHANE ALI',                                    sub:'01.04.2026', topic:'Longest Common Subsequence (LCS) with dynamic programming',              pres:'10.04.2026'},
-  {sl:20, code:'BWU/BAR/24/028', name:'PRERANA BANERJEE',                             sub:'01.04.2026', topic:'Travelling Salesman Problem with dynamic programming',                    pres:'10.04.2026'},
-  {sl:21, code:'BWU/BAR/24/029', name:'ARNAB KUMAR JANA',                             sub:'01.04.2026', topic:'Introduction to backtracking',                                            pres:'10.04.2026'},
-  {sl:22, code:'BWU/BAR/24/030', name:'ARIJIT SAIN',                                  sub:'01.04.2026', topic:'Solving the N-Queens Problem with backtracking',                         pres:'15.04.2026'},
-  {sl:23, code:'BWU/BAR/24/066', name:'Mohit Kumar',                                  sub:'01.04.2026', topic:'Knight\'s Tour on Chess Board with backtracking',                        pres:'15.04.2026'},
-  {sl:24, code:'BWU/BAR/24/069', name:'Biswajit Chakraborty',                         sub:'01.04.2026', topic:'Naïve String Matching Algorithms',                                       pres:'15.04.2026'},
-  {sl:25, code:'BWU/BAR/24/070', name:'Disha Mandal',                                 sub:'01.04.2026', topic:'Introduction to the KMP algorithm',                                      pres:'15.04.2026'},
-  {sl:26, code:'BWU/BAR/24/071', name:'Dipan Paul',                                   sub:'01.04.2026', topic:'Rabin-Karp Algorithm for string matching',                               pres:'15.04.2026'},
-  {sl:27, code:'BWU/BAR/24/072', name:'Sagar Sk',                                     sub:'01.04.2026', topic:'Solving the Traveling Salesman Problem with brute force',                pres:'15.04.2026'},
-  {sl:28, code:'BWU/BAR/24/073', name:'Sayan Basak',                                  sub:'01.04.2026', topic:'Floyd-Warshall Algorithm for all-pair shortest path',                    pres:'15.04.2026'},
-  {sl:29, code:'BWU/BAR/24/031', name:'UJJAL DOLUI',                                  sub:'01.04.2026', topic:'Maximum flows with Ford-Fulkerson Algorithm',                            pres:'15.04.2026'},
-  {sl:30, code:'BWU/BAR/24/033', name:'ABHISHEK MONDAL',                              sub:'01.04.2026', topic:'Push-Relabel Algorithm for maximum flows',                               pres:'15.04.2026'},
-  {sl:31, code:'BWU/BAR/24/034', name:'SANDIP PARAMANIK',                             sub:'01.04.2026', topic:'Minimum Cost Flows with Cycle Cancelling Algorithm',                     pres:'15.04.2026'},
-  {sl:32, code:'BWU/BAR/24/035', name:'ARITRA MALIK',                                 sub:'01.04.2026', topic:'Understanding the Class NP',                                             pres:'15.04.2026'},
-  {sl:33, code:'BWU/BAR/24/036', name:'ANIRBAN SARKAR',                               sub:'01.04.2026', topic:'Reducibility and NP-completeness overview',                              pres:'15.04.2026'},
-  {sl:34, code:'BWU/BAR/24/037', name:'ANUBRATA BHATTACHARYA',                        sub:'01.04.2026', topic:'Exploring Vertex Cover problem',                                         pres:'15.04.2026'},
-  {sl:35, code:'BWU/BAR/24/038', name:'MOULENDU SINHA',                               sub:'01.04.2026', topic:'Approximation Algorithms overview',                                      pres:'15.04.2026'},
-  {sl:36, code:'BWU/BAR/24/039', name:'MALAIKA FIRDOUS AMIR',                         sub:'01.04.2026', topic:'Solving the set-covering problem with approximation algorithms',         pres:'22.04.2026'},
-  {sl:37, code:'BWU/BAR/24/040', name:'PRIYAM JANA',                                  sub:'01.04.2026', topic:'Vertex cover using approximation algorithms',                            pres:'22.04.2026'},
-  {sl:38, code:'BWU/BAR/24/042', name:'SOUMIK PAL',                                   sub:'01.04.2026', topic:'Introduction to K-center clustering',                                    pres:'22.04.2026'},
-  {sl:39, code:'BWU/BAR/24/044', name:'HIRAK GANGULY',                                sub:'01.04.2026', topic:'Randomized Algorithms introduction',                                     pres:'22.04.2026'},
-  {sl:40, code:'BWU/BAR/24/045', name:'SIBKATULLA AL ISLAM',                          sub:'01.04.2026', topic:'Solving the hiring problem with randomized algorithms',                  pres:'22.04.2026'},
-  {sl:41, code:'BWU/BAR/24/046', name:'TURNA BERA',                                   sub:'01.04.2026', topic:'Finding the global Minimum Cut with randomized algorithms',              pres:'22.04.2026'},
-  {sl:42, code:'BWU/BAR/24/047', name:'KUNTAL MANDAL',                                sub:'01.04.2026', topic:'Overview of approximation and randomized algorithms',                    pres:'22.04.2026'},
-  {sl:43, code:'BWU/BAR/24/048', name:'SUDIP DAS',                                    sub:'01.04.2026', topic:'Application of brute force techniques',                                  pres:'22.04.2026'},
-  {sl:44, code:'BWU/BAR/24/049', name:'RAJARSHEE BERA',                               sub:'01.04.2026', topic:'Application of divide and conquer algorithms',                           pres:'22.04.2026'},
-  {sl:45, code:'BWU/BAR/24/050', name:'KAZI WASIM AKRAM',                             sub:'01.04.2026', topic:'Application of greedy techniques',                                       pres:'22.04.2026'},
-  {sl:46, code:'BWU/BAR/24/052', name:'GAUSUL AZAM SK',                               sub:'01.04.2026', topic:'Application of dynamic programming',                                     pres:'22.04.2026'},
-  {sl:47, code:'BWU/BAR/24/053', name:'MASUDUL ALAM',                                 sub:'01.04.2026', topic:'Stages of algorithm development for problem-solving',                    pres:'22.04.2026'},
-  {sl:48, code:'BWU/BAR/24/054', name:'SUBHAM KUMBHAKAR',                             sub:'01.04.2026', topic:'Proof of correctness of algorithms',                                     pres:'22.04.2026'},
-  {sl:49, code:'BWU/BAR/24/055', name:'ARITRIK DEV',                                  sub:'01.04.2026', topic:'All-pair shortest path algorithms overview',                             pres:'22.04.2026'},
-  {sl:50, code:'BWU/BAR/24/056', name:'KRISH BISHWAKARMA',                            sub:'01.04.2026', topic:'Recurrence relation basics',                                             pres:'24.04.2026'},
-  {sl:51, code:'BWU/BAR/24/057', name:'BARNALI MANDAL',                               sub:'01.04.2026', topic:'Methods to solve recurrence relations',                                  pres:'24.04.2026'},
-  {sl:52, code:'BWU/BAR/24/058', name:'ROHAN KAR',                                    sub:'01.04.2026', topic:'Master Theorem in recurrence relations',                                 pres:'24.04.2026'},
-  {sl:53, code:'BWU/BAR/24/059', name:'ROHON DAS',                                    sub:'01.04.2026', topic:'Substitution method in recurrence relations',                            pres:'24.04.2026'},
-  {sl:54, code:'BWU/BAR/24/062', name:'DEBABRATA DEY',                                sub:'01.04.2026', topic:'Recurrence tree method',                                                 pres:'24.04.2026'},
-  {sl:55, code:'BWU/BAR/24/063', name:'PRAGYANSHU SAGAR GIRI',                        sub:'01.04.2026', topic:'Brute force techniques overview',                                       pres:'24.04.2026'},
-  {sl:56, code:'BWU/BAR/24/065', name:'MAHAPRASHAD KARMAKAR',                         sub:'01.04.2026', topic:'Understanding asymptotic notation',                                      pres:'24.04.2026'},
+  {sl:1, code:'BWU/BAR/24/001', name:'SOUMEN BHANDARI', sub:'01.04.2026', topic:'Stages of algorithm development for problem-solving', pres:'08.04.2026'},
+  {sl:2, code:'BWU/BAR/24/002', name:'DHRUBAJOTI KAR', sub:'01.04.2026', topic:'Proof of correctness of algorithms', pres:'08.04.2026'},
+  {sl:3, code:'BWU/BAR/24/003', name:'NIMESH SAMANTA', sub:'01.04.2026', topic:'Understanding asymptotic notation', pres:'08.04.2026'},
+  {sl:4, code:'BWU/BAR/24/004', name:'SUBHAJIT BHAKTA', sub:'01.04.2026', topic:'Recurrence relation basics', pres:'08.04.2026'},
+  {sl:5, code:'BWU/BAR/24/007', name:'ATANU BISWAS', sub:'01.04.2026', topic:'Methods to solve recurrence relations', pres:'08.04.2026'},
+  {sl:6, code:'BWU/BAR/24/008', name:'JOGA JYOTHENDRAVEERAVENKATAS ATYASURYAKANTH', sub:'01.04.2026', topic:'Master Theorem in recurrence relations', pres:'08.04.2026'},
+  {sl:7, code:'BWU/BAR/24/009', name:'SANIA AKTAR', sub:'01.04.2026', topic:'Substitution method in recurrence relations', pres:'08.04.2026'},
+  {sl:8, code:'BWU/BAR/24/010', name:'DIPSIKHA PAYRA', sub:'01.04.2026', topic:'Recurrence tree method', pres:'08.04.2026'},
+  {sl:9, code:'BWU/BAR/24/011', name:'SUPARNA GHORA', sub:'01.04.2026', topic:'Brute force techniques overview', pres:'08.04.2026'},
+  {sl:10, code:'BWU/BAR/24/012', name:'DIPIKA MAITY', sub:'01.04.2026', topic:'Solving the Traveling Salesman Problem with brute force', pres:'08.04.2026'},
+  {sl:11, code:'BWU/BAR/24/013', name:'AKASH BAIRAGI', sub:'01.04.2026', topic:'Divide and conquer algorithm basics', pres:'08.04.2026'},
+  {sl:12, code:'BWU/BAR/24/014', name:'ANKAN DUTTA', sub:'01.04.2026', topic:'Strassen\'s algorithm for matrix multiplication', pres:'08.04.2026'},
+  {sl:13, code:'BWU/BAR/24/015', name:'ARNAB SAHANA', sub:'01.04.2026', topic:'Greedy techniques introduction', pres:'08.04.2026'},
+  {sl:14, code:'BWU/BAR/24/016', name:'SUPRAJIT DE', sub:'01.04.2026', topic:'Huffman Codes and data compression overview', pres:'08.04.2026'},
+  {sl:15, code:'BWU/BAR/24/019', name:'SHILPI BHOWMICK', sub:'01.04.2026', topic:'Solving the Fractional Knapsack problem with greedy technique', pres:'10.04.2026'},
+  {sl:16, code:'BWU/BAR/24/020', name:'MAHUYA BHOWMICK', sub:'01.04.2026', topic:'Introduction to dynamic programming', pres:'10.04.2026'},
+  {sl:17, code:'BWU/BAR/24/021', name:'SAIKAT HAZRA', sub:'01.04.2026', topic:'Solving the 0/1 Knapsack problem with dynamic programming', pres:'10.04.2026'},
+  {sl:18, code:'BWU/BAR/24/023', name:'SK SAHIL UDDIN', sub:'01.04.2026', topic:'Matrix chain multiplication using dynamic programming', pres:'10.04.2026'},
+  {sl:19, code:'BWU/BAR/24/027', name:'SHANE ALI', sub:'01.04.2026', topic:'Longest Common Subsequence (LCS) with dynamic programming', pres:'10.04.2026'},
+  {sl:20, code:'BWU/BAR/24/028', name:'PRERANA BANERJEE', sub:'01.04.2026', topic:'Travelling Salesman Problem with dynamic programming', pres:'10.04.2026'},
+  {sl:21, code:'BWU/BAR/24/029', name:'ARNAB KUMAR JANA', sub:'01.04.2026', topic:'Introduction to backtracking', pres:'10.04.2026'},
+  {sl:22, code:'BWU/BAR/24/030', name:'ARIJIT SAIN', sub:'01.04.2026', topic:'Solving the N-Queens Problem with backtracking', pres:'15.04.2026'},
+  {sl:23, code:'BWU/BAR/24/066', name:'Mohit Kumar', sub:'01.04.2026', topic:'Knight\'s Tour on Chess Board with backtracking', pres:'15.04.2026'},
+  {sl:24, code:'BWU/BAR/24/069', name:'Biswajit Chakraborty', sub:'01.04.2026', topic:'Naïve String Matching Algorithms', pres:'15.04.2026'},
+  {sl:25, code:'BWU/BAR/24/070', name:'Disha Mandal', sub:'01.04.2026', topic:'Introduction to the KMP algorithm', pres:'15.04.2026'},
+  {sl:26, code:'BWU/BAR/24/071', name:'Dipan Paul', sub:'01.04.2026', topic:'Rabin-Karp Algorithm for string matching', pres:'15.04.2026'},
+  {sl:27, code:'BWU/BAR/24/072', name:'Sagar Sk', sub:'01.04.2026', topic:'Solving the Traveling Salesman Problem with brute force', pres:'15.04.2026'},
+  {sl:28, code:'BWU/BAR/24/073', name:'Sayan Basak', sub:'01.04.2026', topic:'Floyd-Warshall Algorithm for all-pair shortest path', pres:'15.04.2026'},
+  {sl:29, code:'BWU/BAR/24/031', name:'UJJAL DOLUI', sub:'01.04.2026', topic:'Maximum flows with Ford-Fulkerson Algorithm', pres:'15.04.2026'},
+  {sl:30, code:'BWU/BAR/24/033', name:'ABHISHEK MONDAL', sub:'01.04.2026', topic:'Push-Relabel Algorithm for maximum flows', pres:'15.04.2026'},
+  {sl:31, code:'BWU/BAR/24/034', name:'SANDIP PARAMANIK', sub:'01.04.2026', topic:'Minimum Cost Flows with Cycle Cancelling Algorithm', pres:'15.04.2026'},
+  {sl:32, code:'BWU/BAR/24/035', name:'ARITRA MALIK', sub:'01.04.2026', topic:'Understanding the Class NP', pres:'15.04.2026'},
+  {sl:33, code:'BWU/BAR/24/036', name:'ANIRBAN SARKAR', sub:'01.04.2026', topic:'Reducibility and NP-completeness overview', pres:'15.04.2026'},
+  {sl:34, code:'BWU/BAR/24/037', name:'ANUBRATA BHATTACHARYA', sub:'01.04.2026', topic:'Exploring Vertex Cover problem', pres:'15.04.2026'},
+  {sl:35, code:'BWU/BAR/24/038', name:'MOULENDU SINHA', sub:'01.04.2026', topic:'Approximation Algorithms overview', pres:'15.04.2026'},
+  {sl:36, code:'BWU/BAR/24/039', name:'MALAIKA FIRDOUS AMIR', sub:'01.04.2026', topic:'Solving the set-covering problem with approximation algorithms', pres:'22.04.2026'},
+  {sl:37, code:'BWU/BAR/24/040', name:'PRIYAM JANA', sub:'01.04.2026', topic:'Vertex cover using approximation algorithms', pres:'22.04.2026'},
+  {sl:38, code:'BWU/BAR/24/042', name:'SOUMIK PAL', sub:'01.04.2026', topic:'Introduction to K-center clustering', pres:'22.04.2026'},
+  {sl:39, code:'BWU/BAR/24/044', name:'HIRAK GANGULY', sub:'01.04.2026', topic:'Randomized Algorithms introduction', pres:'22.04.2026'},
+  {sl:40, code:'BWU/BAR/24/045', name:'SIBKATULLA AL ISLAM', sub:'01.04.2026', topic:'Solving the hiring problem with randomized algorithms', pres:'22.04.2026'},
+  {sl:41, code:'BWU/BAR/24/046', name:'TURNA BERA', sub:'01.04.2026', topic:'Finding the global Minimum Cut with randomized algorithms', pres:'22.04.2026'},
+  {sl:42, code:'BWU/BAR/24/047', name:'KUNTAL MANDAL', sub:'01.04.2026', topic:'Overview of approximation and randomized algorithms', pres:'22.04.2026'},
+  {sl:43, code:'BWU/BAR/24/048', name:'SUDIP DAS', sub:'01.04.2026', topic:'Application of brute force techniques', pres:'22.04.2026'},
+  {sl:44, code:'BWU/BAR/24/049', name:'RAJARSHEE BERA', sub:'01.04.2026', topic:'Application of divide and conquer algorithms', pres:'22.04.2026'},
+  {sl:45, code:'BWU/BAR/24/050', name:'KAZI WASIM AKRAM', sub:'01.04.2026', topic:'Application of greedy techniques', pres:'22.04.2026'},
+  {sl:46, code:'BWU/BAR/24/052', name:'GAUSUL AZAM SK', sub:'01.04.2026', topic:'Application of dynamic programming', pres:'22.04.2026'},
+  {sl:47, code:'BWU/BAR/24/053', name:'MASUDUL ALAM', sub:'01.04.2026', topic:'Stages of algorithm development for problem-solving', pres:'22.04.2026'},
+  {sl:48, code:'BWU/BAR/24/054', name:'SUBHAM KUMBHAKAR', sub:'01.04.2026', topic:'Proof of correctness of algorithms', pres:'22.04.2026'},
+  {sl:49, code:'BWU/BAR/24/055', name:'ARITRIK DEV', sub:'01.04.2026', topic:'All-pair shortest path algorithms overview', pres:'22.04.2026'},
+  {sl:50, code:'BWU/BAR/24/056', name:'KRISH BISHWAKARMA', sub:'01.04.2026', topic:'Recurrence relation basics', pres:'24.04.2026'},
+  {sl:51, code:'BWU/BAR/24/057', name:'BARNALI MANDAL', sub:'01.04.2026', topic:'Methods to solve recurrence relations', pres:'24.04.2026'},
+  {sl:52, code:'BWU/BAR/24/058', name:'ROHAN KAR', sub:'01.04.2026', topic:'Master Theorem in recurrence relations', pres:'24.04.2026'},
+  {sl:53, code:'BWU/BAR/24/059', name:'ROHON DAS', sub:'01.04.2026', topic:'Substitution method in recurrence relations', pres:'24.04.2026'},
+  {sl:54, code:'BWU/BAR/24/062', name:'DEBABRATA DEY', sub:'01.04.2026', topic:'Recurrence tree method', pres:'24.04.2026'},
+  {sl:55, code:'BWU/BAR/24/063', name:'PRAGYANSHU SAGAR GIRI', sub:'01.04.2026', topic:'Brute force techniques overview', pres:'24.04.2026'},
+  {sl:56, code:'BWU/BAR/24/065', name:'MAHAPRASHAD KARMAKAR', sub:'01.04.2026', topic:'Understanding asymptotic notation', pres:'24.04.2026'}
+];
+
+const flatData = [
+  {sl:1, code:'BWU/BAR/24/001', name:'SOUMEN BHANDARI', topic:'Alphabet, Strings, and Languages', pres:'01/04/2026'},
+  {sl:2, code:'BWU/BAR/24/002', name:'DHRUBAJOTI KAR', topic:'Formal Languages and Their Representations', pres:'01/04/2026'},
+  {sl:3, code:'BWU/BAR/24/003', name:'NIMESH SAMANTA', topic:'Chomsky Hierarchy: Overview and Regular Languages', pres:'01/04/2026'},
+  {sl:4, code:'BWU/BAR/24/004', name:'SUBHAJIT BHAKTA', topic:'Productions and Derivations', pres:'01/04/2026'},
+  {sl:5, code:'BWU/BAR/24/007', name:'ATANU BISWAS', topic:'Regular Languages and Their Properties', pres:'01/04/2026'},
+  {sl:6, code:'BWU/BAR/24/008', name:'JOGA JYOTHENDRAVEERAVEN KATASATYASURYAKANTH', topic:'Deterministic Finite Automata (DFA)', pres:'01/04/2026'},
+  {sl:7, code:'BWU/BAR/24/009', name:'SANIA AKTAR', topic:'Nondeterministic Finite Automata (NFA)', pres:'01/04/2026'},
+  {sl:8, code:'BWU/BAR/24/010', name:'DIPSIKHA PAYRA', topic:'Regular Grammars and Their Equivalence with Finite Automata', pres:'01/04/2026'},
+  {sl:9, code:'BWU/BAR/24/011', name:'SUPARNA GHORA', topic:'Pumping Lemma for Regular Languages', pres:'01/04/2026'},
+  {sl:10, code:'BWU/BAR/24/012', name:'DIPIKA MAITY', topic:'Equivalence of DFA, NFA, and Regular Expressions', pres:'01/04/2026'},
+  {sl:11, code:'BWU/BAR/24/013', name:'AKASH BAIRAGI', topic:'Minimization of Finite Automata', pres:'06/04/2026'},
+  {sl:12, code:'BWU/BAR/24/014', name:'ANKAN DUTTA', topic:'Context-Free Grammars (CFGs) and Context-Free Languages (CFLs)', pres:'06/04/2026'},
+  {sl:13, code:'BWU/BAR/24/015', name:'ARNAB SAHANA', topic:'Parse Trees and Ambiguity in CFGs', pres:'06/04/2026'},
+  {sl:14, code:'BWU/BAR/24/016', name:'SUPRAJIT DE', topic:'Chomsky Normal Form (CNF) for CFGs', pres:'06/04/2026'},
+  {sl:15, code:'BWU/BAR/24/019', name:'SHILPI BHOWMICK', topic:'Greibach Normal Form (GNF) for CFGs', pres:'06/04/2026'},
+  {sl:16, code:'BWU/BAR/24/020', name:'MAHUYA BHOWMICK', topic:'Nondeterministic Pushdown Automata (PDA) and Equivalence with CFGs', pres:'06/04/2026'},
+  {sl:17, code:'BWU/BAR/24/021', name:'SAIKAT HAZRA', topic:'Deterministic Pushdown Automata (DPDA)', pres:'06/04/2026'},
+  {sl:18, code:'BWU/BAR/24/023', name:'SK SAHIL UDDIN', topic:'Pumping Lemma for Context-Free Languages (CFLs)', pres:'06/04/2026'},
+  {sl:19, code:'BWU/BAR/24/027', name:'SHANE ALI', topic:'Closure Properties of Context-Free Languages (CFLs)', pres:'06/04/2026'},
+  {sl:20, code:'BWU/BAR/24/028', name:'PRERANA BANERJEE', topic:'Context-Sensitive Languages (CSLs) and grammers (CSGs)', pres:'06/04/2026'},
+  {sl:21, code:'BWU/BAR/24/029', name:'ARNAB KUMAR JANA', topic:'Language Acceptance by Context-Sensitive Grammars', pres:'06/04/2026'},
+  {sl:22, code:'BWU/BAR/24/030', name:'ARIJIT SAIN', topic:'Linear Bounded Automata (LBA): Definition and Structure', pres:'06/04/2026'},
+  {sl:23, code:'BWU/BAR/24/066', name:'Mohit Kumar', topic:'Language Acceptance by Linear Bounded Automata', pres:'06/04/2026'},
+  {sl:24, code:'BWU/BAR/24/069', name:'Biswajit Chakraborty', topic:'Equivalence of Linear Bounded Automata and Context-Sensitive Grammars', pres:'06/04/2026'},
+  {sl:25, code:'BWU/BAR/24/070', name:'Disha Mandal', topic:'Closure Properties of Context-Sensitive Languages', pres:'06/04/2026'},
+  {sl:26, code:'BWU/BAR/24/071', name:'Dipan Paul', topic:'Applications and Advanced Topics in Context-Sensitive Languages', pres:'06/04/2026'},
+  {sl:27, code:'BWU/BAR/24/072', name:'Sagar Sk', topic:'Introduction to Turing Machines (TM)', pres:'06/04/2026'},
+  {sl:28, code:'BWU/BAR/24/073', name:'Sayan Basak', topic:'Turing-Recognizable and Turing-Decidable Languages', pres:'06/04/2026'},
+  {sl:29, code:'BWU/BAR/24/031', name:'UJJAL DOLUI', topic:'Variants of Turing Machines', pres:'06/04/2026'},
+  {sl:30, code:'BWU/BAR/24/033', name:'ABHISHEK MONDAL', topic:'Nondeterministic Turing Machines and Their Equivalence with Deterministic TMs', pres:'06/04/2026'},
+  {sl:31, code:'BWU/BAR/24/034', name:'SANDIP PARAMANIK', topic:'Unrestricted Grammars and Equivalence with Turing Machines', pres:'08/04/2026'},
+  {sl:32, code:'BWU/BAR/24/035', name:'ARITRA MALIK', topic:'Turing Machines as Enumerators', pres:'08/04/2026'},
+  {sl:33, code:'BWU/BAR/24/036', name:'ANIRBAN SARKAR', topic:'Church-Turing Thesis and Universal Turing Machine', pres:'08/04/2026'},
+  {sl:34, code:'BWU/BAR/24/037', name:'ANUBRATA BHATTACHAR', topic:'Undecidability and the Universal and Diagonalization Languages', pres:'08/04/2026'},
+  {sl:35, code:'BWU/BAR/24/038', name:'MOULENDU SINHA', topic:'Reduction Between Languages and Rice’s Theorem', pres:'08/04/2026'},
+  {sl:36, code:'BWU/BAR/24/039', name:'MALAIKA FIRDOUS AMIR', topic:'Alphabet, Strings, and Languages', pres:'08/04/2026'},
+  {sl:37, code:'BWU/BAR/24/040', name:'PRIYAM JANA', topic:'Formal Languages and Their Representations', pres:'08/04/2026'},
+  {sl:38, code:'BWU/BAR/24/042', name:'SOUMIK PAL', topic:'Chomsky Hierarchy: Overview and Regular Languages', pres:'08/04/2026'},
+  {sl:39, code:'BWU/BAR/24/044', name:'HIRAK GANGULY', topic:'Productions and Derivations', pres:'08/04/2026'},
+  {sl:40, code:'BWU/BAR/24/045', name:'SIBKATULLA AL ISLAM', topic:'Regular Languages and Their Properties', pres:'08/04/2026'},
+  {sl:41, code:'BWU/BAR/24/046', name:'TURNA BERA', topic:'Deterministic Finite Automata (DFA)', pres:'13/04/2026'},
+  {sl:42, code:'BWU/BAR/24/047', name:'KUNTAL MANDAL', topic:'Nondeterministic Finite Automata (NFA)', pres:'13/04/2026'},
+  {sl:43, code:'BWU/BAR/24/048', name:'SUDIP DAS', topic:'Regular Grammars and Their Equivalence with Finite Automata', pres:'13/04/2026'},
+  {sl:44, code:'BWU/BAR/24/049', name:'RAJARSHEE BERA', topic:'Pumping Lemma for Regular Languages', pres:'13/04/2026'},
+  {sl:45, code:'BWU/BAR/24/050', name:'KAZI WASIM AKRAM', topic:'Equivalence of DFA, NFA, and Regular Expressions', pres:'13/04/2026'},
+  {sl:46, code:'BWU/BAR/24/052', name:'GAUSUL AZAM SK', topic:'Minimization of Finite Automata', pres:'13/04/2026'},
+  {sl:47, code:'BWU/BAR/24/053', name:'MASUDUL ALAM', topic:'Context-Free Grammars (CFGs) and Context-Free Languages (CFLs)', pres:'13/04/2026'},
+  {sl:48, code:'BWU/BAR/24/054', name:'SUBHAM KUMBHAKAR', topic:'Parse Trees and Ambiguity in CFGs', pres:'13/04/2026'},
+  {sl:49, code:'BWU/BAR/24/055', name:'ARITRIK DEV', topic:'Chomsky Normal Form (CNF) for CFGs', pres:'13/04/2026'},
+  {sl:50, code:'BWU/BAR/24/056', name:'KRISH BISHWAKARMA', topic:'Greibach Normal Form (GNF) for CFGs', pres:'13/04/2026'},
+  {sl:51, code:'BWU/BAR/24/057', name:'BARNALI MANDAL', topic:'Nondeterministic Pushdown Automata (PDA) and Equivalence with CFGs', pres:'13/04/2026'},
+  {sl:52, code:'BWU/BAR/24/058', name:'ROHAN KAR', topic:'Deterministic Pushdown Automata (DPDA)', pres:'13/04/2026'},
+  {sl:53, code:'BWU/BAR/24/059', name:'ROHON DAS', topic:'Pumping Lemma for Context-Free Languages (CFLs)', pres:'13/04/2026'},
+  {sl:54, code:'BWU/BAR/24/062', name:'DEBABRATA DEY', topic:'Closure Properties of Context-Free Languages (CFLs)', pres:'13/04/2026'},
+  {sl:55, code:'BWU/BAR/24/063', name:'PRAGYANSHU SAGAR GIR', topic:'Context-Sensitive Languages (CSLs) and grammers (CSGs)', pres:'13/04/2026'},
+  {sl:56, code:'BWU/BAR/24/065', name:'MAHAPRASHAD KARMAK', topic:'Language Acceptance by Context-Sensitive Grammars', pres:'13/04/2026'}
+];
+
+const oopData = [
+  {sl:1, code:'BWU/BAR/24/001', name:'SOUMEN BHANDARI', topic:'Concept of class and object'},
+  {sl:2, code:'BWU/BAR/24/002', name:'DHRUBAJOTI KAR', topic:'Concept of inheritance'},
+  {sl:3, code:'BWU/BAR/24/003', name:'NIMESH SAMANTA', topic:'Concept of encapsulation'},
+  {sl:4, code:'BWU/BAR/24/004', name:'SUBHAJIT BHAKTA', topic:'Concept of polymorphism'},
+  {sl:5, code:'BWU/BAR/24/007', name:'ATANU BISWAS', topic:'Concept of Constructor'},
+  {sl:6, code:'BWU/BAR/24/008', name:'JOGA', topic:'Use of try & catch in Java'},
+  {sl:7, code:'BWU/BAR/24/009', name:'SANIA AKTAR', topic:'Extension of interfaces'},
+  {sl:8, code:'BWU/BAR/24/010', name:'DIPSIKHA PAYRA', topic:'Services provide by JRE'},
+  {sl:9, code:'BWU/BAR/24/011', name:'SUPARNA GHORA', topic:'Uses of Finalise method'},
+  {sl:10, code:'BWU/BAR/24/012', name:'DIPIKA MAITY', topic:'Concept of call by value and call by ref.'},
+  {sl:11, code:'BWU/BAR/24/013', name:'AKASH BAIRAGI', topic:'Role of static variable and methods'},
+  {sl:12, code:'BWU/BAR/24/014', name:'ANKAN DUTTA', topic:'Execution order of nested classes'},
+  {sl:13, code:'BWU/BAR/24/015', name:'ARNAB SAHANA', topic:'String class'},
+  {sl:14, code:'BWU/BAR/24/016', name:'SUPRAJIT DE', topic:'String buffer class'},
+  {sl:15, code:'BWU/BAR/24/019', name:'SHILPI BHOWMICK', topic:'Uses of the keyword ‘finally’'},
+  {sl:16, code:'BWU/BAR/24/020', name:'MAHUYA BHOWMICK', topic:'Purpose of interface'},
+  {sl:17, code:'BWU/BAR/24/021', name:'SAIKAT HAZRA', topic:'Concept of exception handling'},
+  {sl:18, code:'BWU/BAR/24/023', name:'SK SAHIL UDDIN', topic:'Significance of the keyword “throw” and “throws”'},
+  {sl:19, code:'BWU/BAR/24/027', name:'SHANE ALI', topic:'Multi-threading'},
+  {sl:20, code:'BWU/BAR/24/028', name:'PRERANA BANERJEE', topic:'Use of built-in packages'},
+  {sl:21, code:'BWU/BAR/24/029', name:'ARNAB KUMAR JANA', topic:'Thread life cycle'},
+  {sl:22, code:'BWU/BAR/24/030', name:'ARIJIT SAIN', topic:'Thread synchronisation'},
+  {sl:23, code:'BWU/BAR/24/031', name:'UJJAL DOLUI', topic:'AWT(abstract window toolkit)'},
+  {sl:24, code:'BWU/BAR/24/033', name:'ABHISHEK MONDAL', topic:'Use of super keyword in Java'},
+  {sl:25, code:'BWU/BAR/24/034', name:'SANDIP PARAMANIK', topic:'Init() method'},
+  {sl:26, code:'BWU/BAR/24/035', name:'ARITRA MALIK', topic:'Dynamic method dispatch'},
+  {sl:27, code:'BWU/BAR/24/036', name:'ANIRBAN SARKAR', topic:'Access specifier in Java'},
+  {sl:28, code:'BWU/BAR/24/037', name:'ANUBRATA BHATTACHARYA', topic:'JDBC'},
+  {sl:29, code:'BWU/BAR/24/038', name:'MOULENDU SINHA', topic:'Java interpetor'},
+  {sl:30, code:'BWU/BAR/24/039', name:'MALAIKA FIRDOUS AMIR', topic:'Graphics class'},
+  {sl:31, code:'BWU/BAR/24/040', name:'PRIYAM JANA', topic:'JFrame'},
+  {sl:32, code:'BWU/BAR/24/042', name:'SOUMIK PAL', topic:'JPanel'},
+  {sl:33, code:'BWU/BAR/24/044', name:'HIRAK GANGULY', topic:'Use of Scanner class'},
+  {sl:34, code:'BWU/BAR/24/045', name:'SIBKATULLA AL ISLAM', topic:'JDialog'},
+  {sl:35, code:'BWU/BAR/24/046', name:'TURNA BERA', topic:'Static and dynamic polymorphism'},
+  {sl:36, code:'BWU/BAR/24/047', name:'KUNTAL MANDAL', topic:'Role of the keyword ‘final’'},
+  {sl:37, code:'BWU/BAR/24/048', name:'SUDIP DAS', topic:'Java is platform independent language'},
+  {sl:38, code:'BWU/BAR/24/049', name:'RAJARSHEE BERA', topic:'Use of  "this" keyword in java'},
+  {sl:39, code:'BWU/BAR/24/050', name:'KAZI WASIM AKRAM', topic:'run() method in thread programming'},
+  {sl:40, code:'BWU/BAR/24/052', name:'GAUSUL AZAM SK', topic:'Abstract class'},
+  {sl:41, code:'BWU/BAR/24/053', name:'MASUDUL ALAM', topic:'Message passing in java'},
+  {sl:42, code:'BWU/BAR/24/054', name:'SUBHAM KUMBHAKAR', topic:'Layout manager in applet'},
+  {sl:43, code:'BWU/BAR/24/055', name:'ARITRIK DEV', topic:'Event handling in applet'},
+  {sl:44, code:'BWU/BAR/24/056', name:'KRISH BISHWAKARMA', topic:'“Java is a purely object orient language”'},
+  {sl:45, code:'BWU/BAR/24/057', name:'BARNALI MANDAL', topic:'Arrays in java'},
+  {sl:46, code:'BWU/BAR/24/058', name:'ROHAN KAR', topic:'Wrapper class'},
+  {sl:47, code:'BWU/BAR/24/059', name:'ROHON DAS', topic:'Concept of byte code in Java'},
+  {sl:48, code:'BWU/BAR/24/062', name:'DEBABRATA DEY', topic:'Applet life cycle'},
+  {sl:49, code:'BWU/BAR/24/063', name:'PRAGYANSHU SAGAR GIRI', topic:'Use of super keyword in Java'},
+  {sl:50, code:'BWU/BAR/24/065', name:'MAHAPRASHAD KARMAKAR', topic:'C vs Java'},
+  {sl:51, code:'BWU/BAR/24/066', name:'MOHIT KUMAR', topic:'A superclass reference can point to subclass object'},
+  {sl:52, code:'BWU/BAR/24/069', name:'BISWAJIT CHAKRABORTY', topic:'Remote method invocation'},
+  {sl:53, code:'BWU/BAR/24/070', name:'DISHA MANDAL', topic:'Method over-riding'},
+  {sl:54, code:'BWU/BAR/24/071', name:'DIPAN PAUL', topic:'Inheritance of exception'},
+  {sl:55, code:'BWU/BAR/24/072', name:'SAGAR SK', topic:'Role of java in mobile application'},
+  {sl:56, code:'BWU/BAR/24/073', name:'SAYAN BASAK', topic:'Java as an embedded technology'}
 ];
 
 /* ══════════════════════════════════════════
@@ -1387,9 +1620,36 @@ function renderDaaTable(data){
   setCount('daaCount', data.length, daaData.length);
 }
 
+function renderFlatTable(data){
+  const tbody = document.getElementById('flatTbody');
+  if(!data.length){ tbody.innerHTML='<tr><td colspan="5" class="no-results">No students matched your search.</td></tr>'; setCount('flatCount',0,flatData.length); return; }
+  tbody.innerHTML = data.map(r=>`<tr>
+    <td class="td-sl">${r.sl}</td>
+    <td class="td-code">${r.code}</td>
+    <td class="td-name">${r.name}</td>
+    <td class="td-topic">${r.topic}</td>
+    <td class="td-presdate">${r.pres}</td>
+  </tr>`).join('');
+  setCount('flatCount', data.length, flatData.length);
+}
+
+function renderOopTable(data){
+  const tbody = document.getElementById('oopTbody');
+  if(!data.length){ tbody.innerHTML='<tr><td colspan="4" class="no-results">No students matched your search.</td></tr>'; setCount('oopCount',0,oopData.length); return; }
+  tbody.innerHTML = data.map(r=>`<tr>
+    <td class="td-sl">${r.sl}</td>
+    <td class="td-code">${r.code}</td>
+    <td class="td-name">${r.name}</td>
+    <td class="td-topic">${r.topic}</td>
+  </tr>`).join('');
+  setCount('oopCount', data.length, oopData.length);
+}
+
 renderRosTable(rosData);
 renderMsTable(msData);
 renderDaaTable(daaData);
+renderFlatTable(flatData);
+renderOopTable(oopData);
 
 /* ══════════════════════════════════════════
    SEARCH LISTENERS
@@ -1406,6 +1666,14 @@ document.getElementById('daaSearch').addEventListener('input', function(){
   const q = this.value.trim().toLowerCase();
   renderDaaTable(q ? daaData.filter(r => r.code.toLowerCase().includes(q) || r.name.toLowerCase().includes(q)) : daaData);
 });
+document.getElementById('flatSearch').addEventListener('input', function(){
+  const q = this.value.trim().toLowerCase();
+  renderFlatTable(q ? flatData.filter(r => r.code.toLowerCase().includes(q) || r.name.toLowerCase().includes(q)) : flatData);
+});
+document.getElementById('oopSearch').addEventListener('input', function(){
+  const q = this.value.trim().toLowerCase();
+  renderOopTable(q ? oopData.filter(r => r.code.toLowerCase().includes(q) || r.name.toLowerCase().includes(q)) : oopData);
+});
 
 /* ══════════════════════════════════════════
    PAGE NAVIGATION
@@ -1414,9 +1682,12 @@ const pages = {
   home: document.getElementById('home'),
   subjects: document.getElementById('subjects'),
   topics: document.getElementById('topics'),
+  deadlines: document.getElementById('deadlines'),
   'ros-detail': document.getElementById('ros-detail'),
   'ms-detail': document.getElementById('ms-detail'),
   'daa-detail': document.getElementById('daa-detail'),
+  'flat-detail': document.getElementById('flat-detail'),
+  'oop-detail': document.getElementById('oop-detail'),
 };
 
 function hideAll(){ Object.values(pages).forEach(p => p.classList.remove('active')); }
@@ -1426,11 +1697,11 @@ function showPage(name){
     hideAll();
     pages[name].classList.add('active');
     window.scrollTo({ top: 0, behavior: 'instant' });
-    // Reset search inputs on detail pages
     if(name === 'ros-detail'){ document.getElementById('rosSearch').value = ''; renderRosTable(rosData); }
     if(name === 'ms-detail'){  document.getElementById('msSearch').value  = ''; renderMsTable(msData); }
     if(name === 'daa-detail'){ document.getElementById('daaSearch').value = ''; renderDaaTable(daaData); }
-    // Re-trigger card animations
+    if(name === 'flat-detail'){ document.getElementById('flatSearch').value = ''; renderFlatTable(flatData); }
+    if(name === 'oop-detail'){ document.getElementById('oopSearch').value = ''; renderOopTable(oopData); }
     const cards = pages[name].querySelectorAll('.subject-card, .topic-card');
     cards.forEach(c => { c.style.animation='none'; void c.offsetWidth; c.style.animation=''; });
   });
@@ -1446,31 +1717,32 @@ function nav(name){
 }
 
 document.getElementById('ctaBtn').addEventListener('click',   () => nav('subjects'));
+document.getElementById('ctaBtn2').addEventListener('click',  () => nav('subjects'));
 document.getElementById('topicBtn').addEventListener('click',  () => nav('topics'));
+document.getElementById('topicBtn2').addEventListener('click', () => nav('topics'));
+document.getElementById('deadlineBtn').addEventListener('click', () => nav('deadlines'));
 document.getElementById('rosCard').addEventListener('click',   () => nav('ros-detail'));
 document.getElementById('msCard').addEventListener('click',    () => nav('ms-detail'));
 document.getElementById('daaCard').addEventListener('click',   () => nav('daa-detail'));
+document.getElementById('flatCard').addEventListener('click',  () => nav('flat-detail'));
+document.getElementById('oopCard').addEventListener('click',   () => nav('oop-detail'));
 
-// Keyboard accessibility for interactive cards
-['rosCard','msCard','daaCard'].forEach(id => {
+['rosCard','msCard','daaCard', 'flatCard', 'oopCard'].forEach(id => {
   document.getElementById(id).addEventListener('keydown', e => {
     if(e.key==='Enter'||e.key===' '){ e.preventDefault(); document.getElementById(id).click(); }
   });
 });
 
-// Back buttons
-['backBtn','backBtn2','backBtn3','backBtn4','backBtn5'].forEach(id => {
+['backBtn','backBtn2','backBtn3','backBtn4','backBtn5','backBtn6','backBtn7','backBtn8'].forEach(id => {
   document.getElementById(id).addEventListener('click', () => history.back());
 });
 
-// Browser back/forward
 window.addEventListener('popstate', e => {
   const page = (e.state && e.state.page) ? e.state.page : 'home';
   currentPage = page;
   showPage(page);
 });
 
-// Android visibility safety
 document.addEventListener('visibilitychange', () => {
   if(document.visibilityState==='visible' && history.state && history.state.page !== currentPage){
     history.replaceState({ page: currentPage }, '', location.href);
