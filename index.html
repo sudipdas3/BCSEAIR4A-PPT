@@ -579,7 +579,7 @@ body {
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    DETAIL PAGES (TABLES)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-#ros-detail, #ms-detail, #daa-detail, #deadlines, #flat-detail, #oop-detail {
+#ros-detail, #ms-detail, #daa-detail, #deadlines, #flat-detail, #oop-detail, #dt-detail {
   justify-content: flex-start;
   padding-top: clamp(90px, 15vw, 130px);
 }
@@ -650,10 +650,11 @@ body {
   border-radius: var(--pill);
   color: var(--txt);
   font-family: var(--font-body);
-  font-size: clamp(12px, 1.9vw, 14px);
+  font-size: max(16px, clamp(12px, 1.9vw, 14px));
   outline: none;
   transition: border-color 0.18s ease, box-shadow 0.18s ease;
   backdrop-filter: blur(12px);
+  -webkit-appearance: none;
 }
 .search-input::placeholder { color: var(--txt3); }
 .search-input:focus {
@@ -677,6 +678,7 @@ body {
   width: min(960px, 97vw);
   overflow-x: auto;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   max-height: 65vh;
   border-radius: var(--r);
   border: 1px solid var(--border);
@@ -754,19 +756,106 @@ body {
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    RESPONSIVE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Large tablets / small laptops (≤1024px) */
+@media (max-width: 1024px) {
+  .cards-grid { grid-template-columns: repeat(2, 1fr); width: min(860px, 96vw); }
+  .table-wrap { max-height: 60vh; }
+}
+
+/* Tablets portrait / large phones landscape (≤860px) */
 @media (max-width: 860px) {
   .cards-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-line1 { font-size: clamp(2rem, 8vw, 4rem); }
+  .hero-line2 { font-size: clamp(1.2rem, 5vw, 2.4rem); }
+  .table-wrap { max-height: 58vh; }
+  .td-topic { max-width: 260px; }
 }
-@media (max-width: 560px) {
-  .cards-grid { grid-template-columns: 1fr; width: min(440px, 96vw); }
-  .btn-primary, .btn-secondary { white-space: normal; text-align: center; }
-  .td-topic { max-width: 200px; }
-  .detail-header h2 { font-size: 1.6rem; }
+
+/* Tablets portrait (≤768px) */
+@media (max-width: 768px) {
+  .page { padding: clamp(28px, 5vw, 60px) clamp(12px, 3.5vw, 32px); }
+  #subjects, #topics { padding-top: clamp(72px, 13vw, 100px); }
+  #ros-detail, #ms-detail, #daa-detail, #deadlines, #flat-detail, #oop-detail, #dt-detail, #ps-detail {
+    padding-top: clamp(80px, 14vw, 110px);
+  }
+  .section-title { font-size: clamp(1.4rem, 4.5vw, 2.4rem); }
+  .detail-header h2 { font-size: clamp(1.3rem, 4vw, 2rem); }
+  .back-btn { padding: 9px 16px; font-size: clamp(11px, 2vw, 13px); }
+  .card-deadline { white-space: normal; font-size: clamp(9px, 1.6vw, 11px); }
+  .detail-meta { gap: 8px; }
+  .meta-pill { font-size: clamp(8px, 1.6vw, 11px); padding: 4px 11px; }
+  .search-wrap { width: min(640px, 96vw); }
+  .table-wrap { width: min(860px, 97vw); max-height: 55vh; }
+  .data-table { font-size: clamp(10px, 1.7vw, 13px); }
 }
+
+/* Large phones / small tablets (≤600px) */
+@media (max-width: 600px) {
+  .cards-grid { grid-template-columns: repeat(2, 1fr); width: min(560px, 96vw); gap: clamp(10px, 2.5vw, 16px); }
+  .subject-card, .topic-card { padding: clamp(16px, 3.5vw, 22px) clamp(14px, 3vw, 20px) clamp(44px, 8vw, 56px); }
+  .card-name { font-size: clamp(12px, 2.2vw, 15px); }
+  .card-deadline { font-size: clamp(9px, 2vw, 11px); white-space: normal; line-height: 1.4; }
+  .btn-primary, .btn-secondary { white-space: normal; text-align: center; padding: clamp(13px, 3vw, 16px) clamp(20px, 5vw, 36px); }
+  .table-wrap { max-height: 52vh; }
+  .td-topic { max-width: 180px; }
+  .search-wrap { width: 96vw; }
+}
+
+/* Standard mobile phones (≤480px) */
+@media (max-width: 480px) {
+  .cards-grid { grid-template-columns: 1fr; width: min(420px, 96vw); }
+  .hero-line1 { font-size: clamp(1.8rem, 9vw, 3rem); }
+  .hero-line2 { font-size: clamp(1.1rem, 5.5vw, 1.8rem); }
+  .notice-card { width: 96vw; padding: clamp(14px, 3.5vw, 20px) clamp(16px, 4vw, 24px); }
+  .back-btn { top: clamp(12px, 2.5vw, 20px); left: clamp(12px, 2.5vw, 20px); padding: 9px 14px; font-size: 11px; }
+  .detail-header h2 { font-size: clamp(1.2rem, 6vw, 1.8rem); }
+  .detail-meta { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 6px; }
+  .meta-pill { font-size: clamp(8px, 2.2vw, 10px); padding: 4px 10px; }
+  .table-wrap { max-height: 50vh; }
+  .td-topic { max-width: 140px; }
+  .data-table { font-size: clamp(10px, 2.5vw, 12px); }
+  .data-table th { font-size: clamp(8px, 2vw, 10px); padding: clamp(10px, 2.5vw, 13px) clamp(8px, 2vw, 12px); }
+  .data-table td { padding: clamp(9px, 2vw, 12px) clamp(8px, 2vw, 12px); }
+  .section-title { font-size: clamp(1.3rem, 6.5vw, 2rem); }
+}
+
+/* Small phones (≤390px) */
+@media (max-width: 390px) {
+  .hero-line1 { font-size: clamp(1.6rem, 9.5vw, 2.5rem); }
+  .hero-line2 { font-size: clamp(1rem, 6vw, 1.5rem); }
+  .cards-grid { width: 96vw; gap: 10px; }
+  .td-topic { max-width: 110px; }
+}
+
+/* Very small phones (≤340px) */
 @media (max-width: 340px) {
-  .hero-line1 { font-size: 6.5vw; }
-  .hero-line2 { font-size: 4.8vw; }
+  .hero-line1 { font-size: 8.5vw; }
+  .hero-line2 { font-size: 5.5vw; }
+  .back-btn { padding: 8px 12px; font-size: 10px; }
+  .btn-primary, .btn-secondary { font-size: 12px; }
 }
+
+/* iOS safe area support (notch / home indicator) */
+@supports (padding: max(0px)) {
+  .page { padding-left: max(clamp(16px, 4vw, 48px), env(safe-area-inset-left)); padding-right: max(clamp(16px, 4vw, 48px), env(safe-area-inset-right)); }
+  .back-btn { left: max(clamp(16px, 3vw, 28px), env(safe-area-inset-left) + 8px); top: max(clamp(16px, 3vw, 28px), env(safe-area-inset-top) + 8px); }
+}
+
+/* Landscape mobile — prevent content clipping */
+@media (max-height: 500px) and (orientation: landscape) {
+  .page { min-height: auto; padding-top: clamp(60px, 10vh, 80px); padding-bottom: clamp(20px, 4vh, 40px); }
+  #home { justify-content: flex-start; padding-top: 20px; }
+  .hero-title { margin-bottom: 10px; }
+  .hero-sub { margin-bottom: 16px; }
+  .notice-card { margin-bottom: 16px; }
+  .cta-group { gap: 10px; }
+  .table-wrap { max-height: 70vh; }
+  #ros-detail, #ms-detail, #daa-detail, #deadlines, #flat-detail, #oop-detail, #dt-detail, #ps-detail {
+    padding-top: clamp(60px, 10vh, 80px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -855,7 +944,7 @@ body {
         <div class="card-name">Design Thinking for Entrepreneurship and Startups</div>
         <div class="card-code">BHS00005</div>
       </div>
-      <div class="card-deadline">📅 Last Submission Date will be updated soon</div>
+      <div class="card-deadline">📅 Last Submission Date: March 31, 2026</div>
       <div class="card-arrow">↗</div>
     </a>
 
@@ -923,13 +1012,14 @@ body {
       <div class="card-arrow">↗</div>
     </div>
 
-    <div class="topic-card" role="listitem">
-      <div class="card-num">Subject 02</div>
+    <div class="topic-card clickable" id="dtCard" role="listitem" tabindex="0" aria-label="View Design Thinking for Entrepreneurship and Startups topic list">
+      <div class="card-num" style="color:var(--cyan);background:rgba(0,212,255,0.1);border-color:rgba(0,212,255,0.22);">Subject 02</div>
       <div>
         <div class="card-name">Design Thinking for Entrepreneurship and Startups</div>
         <div class="card-code">BHS00005</div>
       </div>
-      <div class="card-status-pending">⏳ &nbsp;Topics will be updated soon</div>
+      <div class="card-status-ready">✓ &nbsp;Topics available — click to view</div>
+      <div class="card-arrow">↗</div>
     </div>
 
     <div class="topic-card clickable" id="oopCard" role="listitem" tabindex="0" aria-label="View Object Oriented Programming topic list">
@@ -1015,7 +1105,7 @@ body {
           <td class="td-sl">02</td>
           <td class="td-name">Design Thinking for Entrepreneurship and Startups</td>
           <td class="td-code">BHS00005</td>
-          <td class="td-date" style="color:var(--txt3)">Will be updated soon</td>
+          <td class="td-date">March 31, 2026</td>
         </tr>
         <tr>
           <td class="td-sl">03</td>
@@ -1219,6 +1309,37 @@ body {
         </tr>
       </thead>
       <tbody id="oopTbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="page" id="dt-detail">
+  <button class="back-btn" id="backBtn10">← Back</button>
+  <div class="detail-header">
+    <h2>Design Thinking for <em>Entrepreneurship and Startups</em></h2>
+    <p>B.Tech.(CSE) – AIR 2024 &nbsp;·&nbsp; Year 2 • Semester 4</p>
+  </div>
+  <div class="detail-meta">
+    <span class="meta-pill cyan">BHS00005</span>
+    <span class="meta-pill slate">Date Format: dd/mm/yyyy</span>
+    <span class="meta-pill amber">Last Submission Date: 31/03/2026</span>
+  </div>
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input class="search-input" id="dtSearch" type="search" placeholder="Search by student code or name…" autocomplete="off" spellcheck="false">
+  </div>
+  <div class="search-count" id="dtCount">Showing all <strong>56</strong> students</div>
+  <div class="table-wrap">
+    <table class="data-table" id="dtTable">
+      <thead>
+        <tr>
+          <th>Sl.</th>
+          <th>Student Code</th>
+          <th>Name</th>
+          <th>Presentation Topic</th>
+        </tr>
+      </thead>
+      <tbody id="dtTbody"></tbody>
     </table>
   </div>
 </div>
@@ -1618,6 +1739,65 @@ const oopData = [
   {sl:56, code:'BWU/BAR/24/073', name:'SAYAN BASAK', topic:'Java as an embedded technology'}
 ];
 
+const dtData = [
+  {sl:1,  code:'BWU/BAR/24/001', name:'SOUMEN BHANDARI', topic:'Definition and Core Objectives of Design Thinking'},
+  {sl:2,  code:'BWU/BAR/24/002', name:'DHRUBAJOTI KAR', topic:'The Innovation Cycle in Engineering Careers'},
+  {sl:3,  code:'BWU/BAR/24/003', name:'NIMESH SAMANTA', topic:'Acquiring an Entrepreneurial Spirit and Resourcefulness'},
+  {sl:4,  code:'BWU/BAR/24/004', name:'SUBHAJIT BHAKTA', topic:'The Role of Entrepreneurship in National Growth'},
+  {sl:5,  code:'BWU/BAR/24/007', name:'ATANU BISWAS', topic:'Entrepreneurial Quality, Competency, and Motivation'},
+  {sl:6,  code:'BWU/BAR/24/008', name:'JOGA JYOTHENDRA VEERA VENKATA SATYASURYAKANTH', topic:'Brainstorming: Techniques for Concept Generation'},
+  {sl:7,  code:'BWU/BAR/24/009', name:'SANIA AKTAR', topic:'The Empathize Stage: Understanding the User'},
+  {sl:8,  code:'BWU/BAR/24/010', name:'DIPSIKHA PAYRA', topic:'The Define Stage: Crafting Problem Statements'},
+  {sl:9,  code:'BWU/BAR/24/011', name:'SUPARNA GHORA', topic:'The Ideate Stage: Divergent Thinking Strategies'},
+  {sl:10, code:'BWU/BAR/24/012', name:'DIPIKA MAITY', topic:'The Prototype Stage: Bringing Ideas to Life'},
+  {sl:11, code:'BWU/BAR/24/013', name:'AKASH BAIRAGI', topic:'The Test Stage: Validation and Iteration'},
+  {sl:12, code:'BWU/BAR/24/014', name:'ANKAN DUTTA', topic:'Key Traits and Characteristics of an Entrepreneur'},
+  {sl:13, code:'BWU/BAR/24/015', name:'ARNAB SAHANA', topic:'Intrapreneurship: Innovation within Large Organizations'},
+  {sl:14, code:'BWU/BAR/24/016', name:'SUPRAJIT DE', topic:'Analyzing Different Types of Business Structures'},
+  {sl:15, code:'BWU/BAR/24/019', name:'SHILPI BHOWMICK', topic:'Visualizing Designing Processes for Global Business'},
+  {sl:16, code:'BWU/BAR/24/020', name:'MAHUYA BHOWMICK', topic:'The Creative Thinking Process: Principles and Practice'},
+  {sl:17, code:'BWU/BAR/24/021', name:'SAIKAT HAZRA', topic:'Understanding and Mastering Problem Solving'},
+  {sl:18, code:'BWU/BAR/24/023', name:'SK SAHIL UDDIN', topic:'Methods for Testing Creative Problem Solving'},
+  {sl:19, code:'BWU/BAR/24/027', name:'SHANE ALI', topic:'The Design Thinking Approach to Engineering'},
+  {sl:20, code:'BWU/BAR/24/028', name:'PRERANA BANERJEE', topic:'Critical Stages of Product Design'},
+  {sl:21, code:'BWU/BAR/24/029', name:'ARNAB KUMAR JANA', topic:'Case Studies: World-Class Product Designs'},
+  {sl:22, code:'BWU/BAR/24/030', name:'ARIJIT SAIN', topic:'Functionality vs. Aesthetics in Design'},
+  {sl:23, code:'BWU/BAR/24/031', name:'UJJAL DOLUI', topic:'Constructing Innovative Thinking for Services'},
+  {sl:24, code:'BWU/BAR/24/033', name:'ABHISHEK MONDAL', topic:'Fixing Problems through Ingenious Design'},
+  {sl:25, code:'BWU/BAR/24/034', name:'SANDIP PARAMANIK', topic:'Defining the Prototype: Purpose and Goals'},
+  {sl:26, code:'BWU/BAR/24/035', name:'ARITRA MALIK', topic:'The Rapid Prototype Development Process'},
+  {sl:27, code:'BWU/BAR/24/036', name:'ANIRBAN SARKAR', topic:'Testing Methodologies for New Prototypes'},
+  {sl:28, code:'BWU/BAR/24/037', name:'ANUBRATA BHATTACHARYA', topic:'Test Group Marketing Strategies'},
+  {sl:29, code:'BWU/BAR/24/038', name:'MOULENDU SINHA', topic:'Discovering and Validating Business Ideas'},
+  {sl:30, code:'BWU/BAR/24/039', name:'MALAIKA FIRDOUS AMIR', topic:'Visualizing the Business Model'},
+  {sl:31, code:'BWU/BAR/24/040', name:'PRIYAM JANA', topic:'Creating an Effective Activity Map'},
+  {sl:32, code:'BWU/BAR/24/042', name:'SOUMIK PAL', topic:'Essentials of a Professional Business Plan'},
+  {sl:33, code:'BWU/BAR/24/044', name:'HIRAK GANGULY', topic:'Evaluating Market Needs through Prototyping'},
+  {sl:34, code:'BWU/BAR/24/045', name:'SIBKATULLA AL ISLAM', topic:'Practical Examples of Customer Challenges'},
+  {sl:35, code:'BWU/BAR/24/046', name:'TURNA BERA', topic:'Enhancing Customer Experience with Design Thinking'},
+  {sl:36, code:'BWU/BAR/24/047', name:'KUNTAL MANDAL', topic:'Key Parameters of Product Experience'},
+  {sl:37, code:'BWU/BAR/24/048', name:'SUDIP DAS', topic:'Aligning Product Design with Customer Expectations'},
+  {sl:38, code:'BWU/BAR/24/049', name:'RAJARSHEE BERA', topic:'Customer Centricity as a Competitive Advantage'},
+  {sl:39, code:'BWU/BAR/24/050', name:'KAZI WASIM AKRAM', topic:'Developing Ideas Focused on Customer Feedback'},
+  {sl:40, code:'BWU/BAR/24/052', name:'GAUSUL AZAM SK', topic:'The Psychology of Customer Satisfaction in Design'},
+  {sl:41, code:'BWU/BAR/24/053', name:'MASUDUL ALAM', topic:'The Journey: From Idea to Start-up'},
+  {sl:42, code:'BWU/BAR/24/054', name:'SUBHAM KUMBHAKAR', topic:'Market Analysis: Identifying Your Target Market'},
+  {sl:43, code:'BWU/BAR/24/055', name:'ARITRIK DEV', topic:'Competition Evaluation and Strategy Development'},
+  {sl:44, code:'BWU/BAR/24/056', name:'KRISH BISHWAKARMA', topic:'Financing Methods for Start-ups in India'},
+  {sl:45, code:'BWU/BAR/24/057', name:'BARNALI MANDAL', topic:'Recruitment and Management of Talent'},
+  {sl:46, code:'BWU/BAR/24/058', name:'ROHAN KAR', topic:'Intellectual Property Protection: An Overview'},
+  {sl:47, code:'BWU/BAR/24/059', name:'ROHON DAS', topic:'Patents: Securing Technical Innovations'},
+  {sl:48, code:'BWU/BAR/24/062', name:'DEBABRATA DEY', topic:'Copyrights: Protecting Creative Works'},
+  {sl:49, code:'BWU/BAR/24/063', name:'PRAGYANSHU SAGAR GIRI', topic:'Trademarks: Building Brand Security'},
+  {sl:50, code:'BWU/BAR/24/065', name:'MAHAPRASHAD KARMAKAR', topic:'Managing Start-up Risk through IPR'},
+  {sl:51, code:'BWU/BAR/24/066', name:'MOHIT KUMAR', topic:'Trade Secrets: Protecting Confidential Info'},
+  {sl:52, code:'BWU/BAR/24/069', name:'BISWAJIT CHAKRABORTY', topic:'Avoiding Common Trademark Pitfalls'},
+  {sl:53, code:'BWU/BAR/24/070', name:'DISHA MANDAL', topic:'IPR in India: Genesis and Development'},
+  {sl:54, code:'BWU/BAR/24/071', name:'DIPAN PAUL', topic:'IP Management in the International Context'},
+  {sl:55, code:'BWU/BAR/24/072', name:'SAGAR SK', topic:'Using Intellectual Property in Marketing'},
+  {sl:56, code:'BWU/BAR/24/073', name:'SAYAN BASAK', topic:'The Role of IPR in Global Business Structures'}
+];
+
 /* ══════════════════════════════════════════
    RENDER FUNCTIONS
 ══════════════════════════════════════════ */
@@ -1681,6 +1861,18 @@ function renderFlatTable(data){
   setCount('flatCount', data.length, flatData.length);
 }
 
+function renderDtTable(data){
+  const tbody = document.getElementById('dtTbody');
+  if(!data.length){ tbody.innerHTML='<tr><td colspan="4" class="no-results">No students matched your search.</td></tr>'; setCount('dtCount',0,dtData.length); return; }
+  tbody.innerHTML = data.map(r=>`<tr>
+    <td class="td-sl">${r.sl}</td>
+    <td class="td-code">${r.code}</td>
+    <td class="td-name">${r.name}</td>
+    <td class="td-topic">${r.topic}</td>
+  </tr>`).join('');
+  setCount('dtCount', data.length, dtData.length);
+}
+
 function renderOopTable(data){
   const tbody = document.getElementById('oopTbody');
   if(!data.length){ tbody.innerHTML='<tr><td colspan="4" class="no-results">No students matched your search.</td></tr>'; setCount('oopCount',0,oopData.length); return; }
@@ -1698,6 +1890,7 @@ renderMsTable(msData);
 renderDaaTable(daaData);
 renderFlatTable(flatData);
 renderOopTable(oopData);
+renderDtTable(dtData);
 
 /* ══════════════════════════════════════════
    SEARCH LISTENERS
@@ -1722,6 +1915,10 @@ document.getElementById('oopSearch').addEventListener('input', function(){
   const q = this.value.trim().toLowerCase();
   renderOopTable(q ? oopData.filter(r => r.code.toLowerCase().includes(q) || r.name.toLowerCase().includes(q)) : oopData);
 });
+document.getElementById('dtSearch').addEventListener('input', function(){
+  const q = this.value.trim().toLowerCase();
+  renderDtTable(q ? dtData.filter(r => r.code.toLowerCase().includes(q) || r.name.toLowerCase().includes(q)) : dtData);
+});
 
 /* ══════════════════════════════════════════
    PAGE NAVIGATION
@@ -1737,6 +1934,7 @@ const pages = {
   'flat-detail': document.getElementById('flat-detail'),
   'oop-detail': document.getElementById('oop-detail'),
   'ps-detail': document.getElementById('ps-detail'),
+  'dt-detail': document.getElementById('dt-detail'),
 };
 
 function hideAll(){ Object.values(pages).forEach(p => p.classList.remove('active')); }
@@ -1744,19 +1942,24 @@ function hideAll(){ Object.values(pages).forEach(p => p.classList.remove('active
 function showPage(name){
   requestAnimationFrame(()=>{
     hideAll();
-    pages[name].classList.add('active');
+    const target = pages[name] || pages['home'];
+    target.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'instant' });
     if(name === 'ros-detail'){ document.getElementById('rosSearch').value = ''; renderRosTable(rosData); }
     if(name === 'ms-detail'){  document.getElementById('msSearch').value  = ''; renderMsTable(msData); }
     if(name === 'daa-detail'){ document.getElementById('daaSearch').value = ''; renderDaaTable(daaData); }
     if(name === 'flat-detail'){ document.getElementById('flatSearch').value = ''; renderFlatTable(flatData); }
     if(name === 'oop-detail'){ document.getElementById('oopSearch').value = ''; renderOopTable(oopData); }
-    const cards = pages[name].querySelectorAll('.subject-card, .topic-card');
+    if(name === 'dt-detail'){  document.getElementById('dtSearch').value  = ''; renderDtTable(dtData); }
+    const cards = target.querySelectorAll('.subject-card, .topic-card');
     cards.forEach(c => { c.style.animation='none'; void c.offsetWidth; c.style.animation=''; });
   });
 }
 
 let currentPage = 'home';
+
+/* Seed history: replace the very first entry with home, then push a duplicate
+   so there is always a "back" entry available while keeping the user on home. */
 history.replaceState({ page: 'home' }, '', location.href);
 
 function nav(name){
@@ -1776,28 +1979,50 @@ document.getElementById('daaCard').addEventListener('click',   () => nav('daa-de
 document.getElementById('flatCard').addEventListener('click',  () => nav('flat-detail'));
 document.getElementById('oopCard').addEventListener('click',   () => nav('oop-detail'));
 document.getElementById('psCard').addEventListener('click',  () => nav('ps-detail'));
+document.getElementById('dtCard').addEventListener('click',  () => nav('dt-detail'));
 
-['rosCard','msCard','daaCard', 'flatCard', 'oopCard', 'psCard'].forEach(id => {
+['rosCard','msCard','daaCard', 'flatCard', 'oopCard', 'psCard', 'dtCard'].forEach(id => {
   document.getElementById(id).addEventListener('keydown', e => {
     if(e.key==='Enter'||e.key===' '){ e.preventDefault(); document.getElementById(id).click(); }
   });
 });
 
-['backBtn','backBtn2','backBtn3','backBtn4','backBtn5','backBtn6','backBtn7','backBtn8','backBtn9'].forEach(id => {
+/* In-page back buttons: always navigate back via history */
+['backBtn','backBtn2','backBtn3','backBtn4','backBtn5','backBtn6','backBtn7','backBtn8','backBtn9','backBtn10'].forEach(id => {
   document.getElementById(id).addEventListener('click', () => history.back());
 });
 
+/* Device back button (Android hardware back, browser back button, swipe-back on iOS/Android) */
 window.addEventListener('popstate', e => {
   const page = (e.state && e.state.page) ? e.state.page : 'home';
   currentPage = page;
   showPage(page);
 });
 
+/* Keep history state in sync when tab becomes visible again */
 document.addEventListener('visibilitychange', () => {
   if(document.visibilityState==='visible' && history.state && history.state.page !== currentPage){
     history.replaceState({ page: currentPage }, '', location.href);
   }
 });
+
+/* Touch swipe-back gesture support for iOS Safari (no-op on other browsers) */
+(function(){
+  let touchStartX = 0;
+  let touchStartY = 0;
+  document.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+  document.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
+    /* Swipe right from left edge (within 40px) = back */
+    if(touchStartX < 40 && dx > 60 && dy < 80 && currentPage !== 'home'){
+      history.back();
+    }
+  }, { passive: true });
+})();
 </script>
 </body>
 </html>
